@@ -1,0 +1,33 @@
+.background{
+    background-color: rgb(49,57,117);
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.mywrapper{
+    background-color: rgb(212,214,237);
+    padding-bottom: 20px;
+}
+
+.custom-list-group{
+    background-color:rgb(12,18,65)!important;
+    border-color: rgb(49,57,117)!important;
+}
+
+h1{
+    color: rgb(12,18,65);
+}
+h2{
+    color: rgb(49,57,117);
+    font-size: 20px;
+}
+
+.custom-btn{
+    background-color: rgb(49,57,117)!important;
+    border-color: rgb(12,18,65);
+}
+#login{
+    padding: 20px;
+}
+
