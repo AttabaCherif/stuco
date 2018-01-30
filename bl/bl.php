@@ -1,6 +1,7 @@
 <?php
 const USER = "Jean";
 const PASS = "anje";
+const PUBS = "1|Concombre->Le meilleur#1|Tomate->La plus rouge#0|Carotte->La plus longue#1|salade->La plus légère#1|Choux->La fleur#1|Le radis->Le noir#";
 /**
  * Authentifie un login = (username, password)
  * @param string username
@@ -12,4 +13,8 @@ function authenticate($username, $password){
 		return true;
 	else
 		return false;
+}
+
+function pubs(){
+    return PUBS ;
 }

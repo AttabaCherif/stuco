@@ -31,40 +31,16 @@ function initApp() {
  */
 function doConnect() {
 	window.console.log("doConnect() -start/return");
-	var logUsername=document.getElementById("logUsername");
-	var logPassword=document.getElementById("logPassword");
-	var btConnection = document.getElementById("btConnexion");
-	var frontUsername = document.getElementById("frontUsername");
+
 	if (g_isConnected) {
 		pubs();
-		btConnection.innerHTML = "Connexion";
-		frontUsername.innerHTML="";
+        $('#btConnexion').html("Connexion");
+        $('#frontUsername').html("");
 		g_isConnected = false;
 	} else {
-		authenticate(logUsername.value,logPassword.value);
+		authenticate($('#logUsername').val(),$('#logPassword').val());
 	}
 }
-
-
-
-function authenticateCallBack(ret){
-	var logUsername=document.getElementById("logUsername");
-	var logPassword=document.getElementById("logPassword");
-	var btConnection = document.getElementById("btConnexion");
-	var frontUsername = document.getElementById("frontUsername");
-	if (ret==1){
-		btConnection.innerHTML = "Deconnexion";
-		document.getElementById("wall").innerHTML = '';
-		frontUsername.innerHTML="Welcome " +logUsername.value+"!";
-		logUsername.value="";
-		logPassword.value="";
-		g_isConnected = true;
-	}else
-	{
-		alert("Mot de passe incorrect")
-	}
-}
-
 
 /**
  * authentifie un login = (username, password) par une requête Ajax vers le server
@@ -73,51 +49,39 @@ function authenticateCallBack(ret){
  * @return authentificateCallback(responses)
  */
 function authenticate(username, password) {
-	window.console.log("authenticate("+username+","+password+") -start Ajax");
-	
-	//creation of object XLMHttpRequest
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange =
-		function ()
-		{ //callback called a every readyState (1,2,3 and 4)
-			if(xhr.readyState == 4 && xhr.status == 200)
-			{
-				// Assign the response of php function (true or false)
-				var ret = xhr.responseText;
-				// function to define later (cf. Labo)
-				authenticateCallBack(ret);
-			}
-		}
-	// transition readyState 0->1 : request initalisation
-	xhr.open("GET","bl/authenticate.php?username="+username+"&password="+password,true);
-	// transition readyState 1->2 : send the request 
-	xhr.send(null);	
-		
-}
+    window.console.log("authenticate("+username+","+password+") -start Ajax");
 
+    $.ajax({
+        type : 'GET',
+        url : 'bl/authenticate.php',
+        data : "username="+username+"&password="+password,
+        dataType : 'text',
+        success : authenticateCallBack
+    });
+}
 
 /**
- * Création d'un moteur AJAX adapté au navigateur client
- * @returns res le moteur AJAX
- */
-function createXHR() {
-	var res = null;
-	try {// navigateurs Mozilla, Opera...
-		res = new XMLHttpRequest();
+* Réalise l'affichage en fonction de la valeur de retour de authenticate
+ * @param ret : 1 ou 0 selon réussite ou echec du log in
+* */
+function authenticateCallBack(ret){
+	var logUsername=$("#logUsername");
+	var logPassword=$("#logPassword");
+
+	if (ret==1){
+		$('#btConnexion').html('Deconnexion');
+		$('#wall').html('');
+		$('#frontUsername').html("Welcome " +logUsername.val()+"!");
+
+		logUsername.val("");
+		logPassword.val("");
+		g_isConnected = true;
+	}else
+	{
+		alert("Mot de passe incorrect")
 	}
-	catch (e) {
-		try {// navigateurs Internet Explorer > 5.0
-			res = new ActiveXObject("Msxml2.XMLHTTP");
-		} catch (e) {
-			try {// navigateur Internet Explorer 5.0
-				res = new ActiveXObject("Microsoft.XMLHTTP");
-			} catch (e) {
-				res = null;
-			}
-		}
-	}
-	return res;
 }
+
 /**
  * Affiche la publicité sur le mur
  * Une pub est affichée seulement si 1er caractère est 1
@@ -127,15 +91,26 @@ function createXHR() {
  */
 function pubs() {
 	window.console.log("pubs() -start");
-	//
-	var publicite = "1|Concombre->Le meilleur#1|Tomate->La plus rouge#0|Carotte->La plus longue#1|salade->La plus légère#1|Choux->La fleur#1|Le radis->Le noir#";
-	var pubs = publicite.split("#");
-	var pubHTML = '<div id="pubs">';
-	for (i = 0; i < pubs.length; i++) {
-		if (pubs[i].charAt(0) == "1") pubHTML += "<br/>" + pubs[i].substring(2);
-	}
-	pubHTML += "</div>"
-	document.getElementById("wall").innerHTML = pubHTML;
-	//
+
+	$.ajax({
+		type : 'GET',
+		url : 'bl/getPubs.php',
+		success : pubsCallback
+	});
+
 	window.console.log("pubs() -end");
+}
+
+function pubsCallback(publicite)
+{
+    window.console.log("pubsCallback() -start");
+
+    var pubs = publicite.split("#");
+    var pubHTML = '<div id="pubs">';
+    for (i = 0; i < pubs.length; i++) {
+        if (pubs[i].charAt(0) == "1") pubHTML += "<br/>" + pubs[i].substring(2);
+    }
+    pubHTML += "</div>"
+    document.getElementById("wall").innerHTML = pubHTML;
+    window.console.log("pubsCallback() -stop");
 }
