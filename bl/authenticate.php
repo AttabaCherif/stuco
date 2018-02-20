@@ -6,5 +6,12 @@ require_once 'bl.php';
 $username=utf8_encode($_REQUEST['username']);
 $password=utf8_encode($_REQUEST['password']);
 //
-$ret = authenticate($username, $password);
+$id = authenticate($username, $password);
+
+if ($id != NULL)
+    $ret=1;
+else
+    $ret=0;
+
 echo $ret;
+

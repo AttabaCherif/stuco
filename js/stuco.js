@@ -1,10 +1,6 @@
 /**
- * studentCo.v011
+ * stuco v0.1
  */
-
-//login autorisé
-const USER = "Jean";
-const PASS = 'anje';
 
 //var global
 var g_username;
@@ -25,7 +21,7 @@ function initApp() {
 }
 
 /**
- * Appelé quand click le bouton de la boîte de connexion
+ * Appelé quand click sur le bouton de la boîte de connexion
  * si g_isConnected = true : on est déjà connecté et l'utilisateur doit être déconnecté
  * si g_isConnected = false : authenticate(username, password) décide si connection ou non
  */
@@ -113,4 +109,14 @@ function pubsCallback(publicite)
     pubHTML += "</div>"
     document.getElementById("wall").innerHTML = pubHTML;
     window.console.log("pubsCallback() -stop");
+}
+
+
+
+
+function overElement(e){
+	e.style.cursor="pointer";
+}
+function outElement(e){
+	e.style.cursor="default";
 }

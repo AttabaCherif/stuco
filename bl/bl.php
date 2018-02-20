@@ -1,7 +1,16 @@
 <?php
-const USER = "Jean";
-const PASS = "anje";
-const PUBS = "1|Concombre->Le meilleur#1|Tomate->La plus rouge#0|Carotte->La plus longue#1|salade->La plus légère#1|Choux->La fleur#1|Le radis->Le noir#";
+
+//Les imports lien entre Business et DAL
+define("ROOTSITE", $_SERVER["DOCUMENT_ROOT"]."/stuco/");
+define("DAL", ROOTSITE.'dal/dal.php');
+require_once DAL;
+//require_once 'C:/xampp/htdocs/stuco/dal/dal.php';
+
+
+/**
+ * ICI ON DEFINI LES FONCTIONS
+ */
+
 /**
  * Authentifie un login = (username, password)
  * @param string username
@@ -9,10 +18,8 @@ const PUBS = "1|Concombre->Le meilleur#1|Tomate->La plus rouge#0|Carotte->La plu
  * @return boolean true si authentifié, false sinon
  */
 function authenticate($username, $password){
-	if ($username == USER && $password == PASS)
-		return true;
-	else
-		return false;
+    $id= dbReadLogin($username,$password);
+	return $id;
 }
 
 function pubs(){
