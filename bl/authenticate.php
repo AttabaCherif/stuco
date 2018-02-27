@@ -9,9 +9,9 @@ $password=utf8_encode($_REQUEST['password']);
 $id = authenticate($username, $password);
 
 if ($id != NULL)
-    $ret=1;
+    $ret=true;
 else
-    $ret=0;
+    $ret=false;
 
 echo $ret;
 

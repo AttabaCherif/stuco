@@ -58,32 +58,52 @@ function authenticate(username, password) {
 
 /**
 * Réalise l'affichage en fonction de la valeur de retour de authenticate
- * @param ret : 1 ou 0 selon réussite ou echec du log in
+ * @param response : 1 ou 0 selon réussite ou echec du log in
 * */
-function authenticateCallBack(ret){
-	var logUsername=$("#logUsername");
-	var logPassword=$("#logPassword");
+function authenticateCallBack(response){
+    if(response)
+        connect();
+    else
+        alert("Mot de passe incorrect");
 
-	if (ret==1){
-		$('#btConnexion').html('Deconnexion');
-		$('#wall').html('');
-		$('#frontUsername').html("Welcome " +logUsername.val()+"!");
-
-		logUsername.val("");
-		logPassword.val("");
-		g_isConnected = true;
-	}else
-	{
-		alert("Mot de passe incorrect")
-	}
 }
 
 /**
- * Affiche la publicité sur le mur
- * Une pub est affichée seulement si 1er caractère est 1
- * Appelé par initApp à la fin du chargement de la page
- * Conseil utilisation :
- * Disparait quand connecté et réapparait quand déconnecté
+ * Affiche les informations relative à un log in réussi
+ * Affiche la liste des Codisciple (pour l'instant l'entièreté)
+ */
+function connect()
+{
+
+    $.ajax({
+        type :'GET',
+        url : 'bl/fetchCodisciples.php',
+        success : fetchCodisciplesCallback
+    });
+
+    var logUsername=$("#logUsername");
+    var logPassword=$("#logPassword");
+
+    $('#btConnexion').html('Deconnexion');
+    $('#wall').html('');
+    $('#frontUsername').html("Welcome " +logUsername.val()+"!");
+
+    logUsername.val("");
+    logPassword.val("");
+
+    g_isConnected = true;
+}
+
+function fetchCodisciplesCallback(ret)
+{
+    window.console.log("fetchCodisciplesCallback(ret) -start");
+    $('#page').html(ret);
+    window.console.log("fetchCodisciplesCallback(ret) -start");
+}
+
+/**
+ * Recupère les pubs par une requête Ajax vers le server
+ * @return pubsCallback(publicite)
  */
 function pubs() {
 	window.console.log("pubs() -start");
@@ -97,6 +117,10 @@ function pubs() {
 	window.console.log("pubs() -end");
 }
 
+/**
+ * Affiche la publicité sur le mur
+ * @param publicite : une string contenant la liste des pubs séparée par #
+ * */
 function pubsCallback(publicite)
 {
     window.console.log("pubsCallback() -start");
@@ -112,11 +136,20 @@ function pubsCallback(publicite)
 }
 
 
-
-
+/**
+ * @param e
+ * fonction déclenchée par le survole sur d'un élement
+ * Affiche : un pointeur de selection
+ */
 function overElement(e){
 	e.style.cursor="pointer";
 }
+
+/**
+ * @param e
+ * fonction déclenchée par le survole hors d'un élément
+ * Affiche : le pointeur par défault
+ */
 function outElement(e){
 	e.style.cursor="default";
 }

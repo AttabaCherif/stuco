@@ -1,10 +1,14 @@
 <?php
 
+const PUBS = "1|Concombre->Le meilleur#1|Tomate->La plus
+rouge#0|Carotte->La plus longue#1|salade->La plus légère#1|Choux->La fleur#1|Le
+radis->Le noir#";
+
 //Les imports lien entre Business et DAL
 define("ROOTSITE", $_SERVER["DOCUMENT_ROOT"]."/stuco/");
 define("DAL", ROOTSITE.'dal/dal.php');
 require_once DAL;
-//require_once 'C:/xampp/htdocs/stuco/dal/dal.php';
+
 
 
 /**
@@ -22,6 +26,17 @@ function authenticate($username, $password){
 	return $id;
 }
 
+/**
+ * @return string contenant les pubs stockées en constante
+ */
 function pubs(){
     return PUBS ;
+}
+
+/**
+ * @return list of rows contenant les coDisciples stockés en DB
+ */
+function fetchCoDisciples(){
+    $rows = dbListOfCodisciples();
+    return $rows;
 }

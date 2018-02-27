@@ -6,8 +6,6 @@ require_once 'connect.php' ;
  * @param String $password
  * @return NULL si pas trouvé | l'id si ok | NULL si Exception
  */
-
-
 function dbReadLogin($username,$password){
 
    //query
@@ -28,4 +26,19 @@ function dbReadLogin($username,$password){
    catch (Exception $error) {
        return NULL;
    }
+}
+
+
+/**
+ * @return null en cas d'exception | L'ensemble des coDisciple stockés en DB
+ */
+function dbListOfCodisciples(){
+    $sql="SELECT username FROM login";
+    try{
+        $pdo = getPDO();
+        $rows = $pdo->query($sql)->fetchAll();
+        $pdo=null;
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+
 }
