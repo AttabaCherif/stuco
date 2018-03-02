@@ -32,6 +32,7 @@ function doConnect() {
 		pubs();
         $('#btConnexion').html("Connexion");
         $('#frontUsername').html("");
+        $('#wall').html("");
 		g_isConnected = false;
 	} else {
 		authenticate($('#logUsername').val(),$('#logPassword').val());
@@ -72,8 +73,7 @@ function authenticateCallBack(response){
  * Affiche les informations relative à un log in réussi
  * Affiche la liste des Codisciple (pour l'instant l'entièreté)
  */
-function connect()
-{
+function connect() {
 
     $.ajax({
         type :'GET',
@@ -94,13 +94,40 @@ function connect()
     g_isConnected = true;
 }
 
-function fetchCodisciplesCallback(ret)
-{
+function fetchCodisciplesCallback(ret) {
     window.console.log("fetchCodisciplesCallback(ret) -start");
-    $('#page').html(ret);
+    try{
+        var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >List des co' disciples </button>";
+        var jarray = $.parseJSON(ret);
+        for (var i = 0 ; i <jarray.length ; i++)
+        {
+            var row= jarray[i];
+            var id = row['id'];
+            var username = row['username'];
+            var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
+                "' onclick='wallCoDisciple(this.id.substring(2),this.innerHTML);'"+
+            " onmousemove='overElement(this);' onmouseout='outElement(this);'>"
+            ligne+= username+"</button>";
+            affiche += ligne;
+        }
+    }catch (err){window.console.log("fetchCoDisciplesCallBack -err = "+err);}
+    affiche+="</div>";
+    $('#page').html(affiche);
+
     window.console.log("fetchCodisciplesCallback(ret) -start");
 }
 
+
+
+/**
+ * Charge le mur d’un coDisciple
+ * @param id id du coDisciple
+ * @param alias username du coDisciple
+ * @returns Affiche le mur du coDisciple dans $('#wall')
+ */
+function wallCoDisciple(id, alias) {
+    window.alert("Click sur "+alias)
+}
 /**
  * Recupère les pubs par une requête Ajax vers le server
  * @return pubsCallback(publicite)
@@ -121,8 +148,7 @@ function pubs() {
  * Affiche la publicité sur le mur
  * @param publicite : une string contenant la liste des pubs séparée par #
  * */
-function pubsCallback(publicite)
-{
+function pubsCallback(publicite) {
     window.console.log("pubsCallback() -start");
 
     var pubs = publicite.split("#");
@@ -138,7 +164,7 @@ function pubsCallback(publicite)
 
 /**
  * @param e
- * fonction déclenchée par le survole sur d'un élement
+ * fonction déclenchée par le survole sur d'un élement  (event  : onmousemove)
  * Affiche : un pointeur de selection
  */
 function overElement(e){
@@ -147,7 +173,7 @@ function overElement(e){
 
 /**
  * @param e
- * fonction déclenchée par le survole hors d'un élément
+ * fonction déclenchée par le survole hors d'un élément (event  : onmouseout)
  * Affiche : le pointeur par défault
  */
 function outElement(e){

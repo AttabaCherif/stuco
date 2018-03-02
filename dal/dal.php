@@ -32,8 +32,8 @@ function dbReadLogin($username,$password){
 /**
  * @return null en cas d'exception | L'ensemble des coDisciple stockés en DB
  */
-function dbListOfCodisciples(){
-    $sql="SELECT username FROM login";
+function dbListOfCodisciples($id){
+    $sql="SELECT id,username FROM login WHERE id !='".$id."'";
     try{
         $pdo = getPDO();
         $rows = $pdo->query($sql)->fetchAll();

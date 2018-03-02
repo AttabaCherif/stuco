@@ -36,7 +36,7 @@ function pubs(){
 /**
  * @return list of rows contenant les coDisciples stockés en DB
  */
-function fetchCoDisciples(){
-    $rows = dbListOfCodisciples();
+function fetchCoDisciples($id){
+    $rows = dbListOfCodisciples($id);
     return $rows;
 }
