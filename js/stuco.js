@@ -53,7 +53,7 @@ function authenticate(username, password) {
         url : 'bl/authenticate.php',
         data : "username="+username+"&password="+password,
         dataType : 'text',
-        success : authenticateCallBack
+        success : authenticateCallback
     });
 }
 
@@ -61,7 +61,7 @@ function authenticate(username, password) {
 * Réalise l'affichage en fonction de la valeur de retour de authenticate
  * @param response : 1 ou 0 selon réussite ou echec du log in
 * */
-function authenticateCallBack(response){
+function authenticateCallback(response){
     if(response)
         connect();
     else
@@ -75,23 +75,24 @@ function authenticateCallBack(response){
  */
 function connect() {
 
+    var logUsername=$("#logUsername");
+    var logPassword=$("#logPassword");
+
+    $('#btConnexion').html('Deconnexion');
+
+    var wallHeader = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Mur  de "+logUsername.val()+"  </button>";
+    $('#wall').html(wallHeader);
+    logUsername.val("");
+    logPassword.val("");
+
+    g_isConnected = true;
     $.ajax({
         type :'GET',
         url : 'bl/fetchCodisciples.php',
         success : fetchCodisciplesCallback
     });
 
-    var logUsername=$("#logUsername");
-    var logPassword=$("#logPassword");
 
-    $('#btConnexion').html('Deconnexion');
-    $('#wall').html('');
-    $('#frontUsername').html("Welcome " +logUsername.val()+"!");
-
-    logUsername.val("");
-    logPassword.val("");
-
-    g_isConnected = true;
 }
 
 function fetchCodisciplesCallback(ret) {
@@ -126,8 +127,27 @@ function fetchCodisciplesCallback(ret) {
  * @returns Affiche le mur du coDisciple dans $('#wall')
  */
 function wallCoDisciple(id, alias) {
-    window.alert("Click sur "+alias)
+    // il faut aller chercher tous les tweets du wall_owner
+    // $.ajax({
+    //     type :'GET',
+    //     url : 'bl/fetchTweet.php',
+    //     data : "id="+id,
+    //     success : wallCoDiscipleCallback
+    // });
+
+
 }
+
+
+function wallCoDiscipleCallback(tweets)
+{
+    // TODO
+    var jarray = $.parseJSON(tweets);
+
+
+
+}
+
 /**
  * Recupère les pubs par une requête Ajax vers le server
  * @return pubsCallback(publicite)

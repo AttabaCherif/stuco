@@ -31,9 +31,12 @@ function dbReadLogin($username,$password){
 
 /**
  * @return null en cas d'exception | L'ensemble des coDisciple stockés en DB
+ * @param int $id : id du user dont on demande la liste des coDisciples
  */
 function dbListOfCodisciples($id){
-    $sql="SELECT id,username FROM login WHERE id !='".$id."'";
+
+    $sql="SELECT l.id, l.username from login l , approval a WHERE ((a.owner_id = '$id'  AND a.guest_id = l.id) OR (a.guest_id = '$id' AND l.id = a.owner_id)) AND a.current_status = 1";
+
     try{
         $pdo = getPDO();
         $rows = $pdo->query($sql)->fetchAll();
