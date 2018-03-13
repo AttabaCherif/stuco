@@ -1,0 +1,1 @@
+RewriteRule ^login/([0-9a-z]+)/([0-9a-z]+)/$ bl/RestController.php?method=authenticate&username=$1&password=$2 [nc,qsa]

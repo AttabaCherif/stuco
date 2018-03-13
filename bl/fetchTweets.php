@@ -7,10 +7,13 @@ session_start();
 $id = $_SESSION['uid'];
 
 // récupère un array php des tweets
-$rows = fetchTweets($wall_owner_id);
+if($id==0)
+    $rows = fetchTweets($id);
+else
+    $rows = fetchTweets($wall_owner_id);
 
-
-if(!$rows) $ret=NULL;
+if(!$rows)
+    $ret=NULL;
 else
 {
     // retourne au navigateur un fichier JSON avec les users

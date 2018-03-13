@@ -74,7 +74,8 @@ function authenticateCallback(response){
  * Affiche les informations relative à un log in réussi
  * Affiche la liste des Codisciple (pour l'instant l'entièreté)
  */
-function connect() {
+function connect()
+{
     window.console.log("authenticate () -start ")
     var logUsername=$("#logUsername");
     var logPassword=$("#logPassword");
@@ -86,14 +87,19 @@ function connect() {
     window.console.log("ajax -> bl/fetchCodisciples.php");
 
     g_isConnected = true;
+
+    fetchCodisciples();
+    wallCoDisciple(0);
+}
+
+function fetchCodisciples()
+{
+    window.console.log("fetchCodisciples() - start Ajax -> bl/fetchCodisciples.php");
     $.ajax({
         type :'GET',
         url : 'bl/fetchCodisciples.php',
         success : fetchCodisciplesCallback
     });
-
-
-
 }
 
 function fetchCodisciplesCallback(ret) {
@@ -142,8 +148,9 @@ function fetchTweetsCallback(tweets)
     try
     {
         var jarray = $.parseJSON(tweets);
-        var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Mur  de" +
-            jarray['wall_owner_id']+" </button>";
+        // var lol = jarray[0];
+        var wall_owner = (jarray[0])['wall_owner_id'];
+        var affiche = "<div id='wall_list_title' class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Mur  de "+wall_owner+" </button>";
 
         for (var i = 0 ; i < jarray.length ; i++)
         {
@@ -169,24 +176,6 @@ function fetchTweetsCallback(tweets)
 /*
 
 
-function fetchUsername(id)
-{
-    window.console.log("fetchUsername() - start");
-
-    $.ajax(
-        {
-            type:'GET',
-            url : 'bl/fetchUsername.php',
-            data : 'id='+id,
-            success : fetchUsernameCallback
-        }
-    )
-}
-
-function fetchUsernameCallback(username)
-{
-    return username;
-}
 */
 
 /**
