@@ -40,3 +40,11 @@ function fetchCoDisciples($id){
     $rows = dbListOfCodisciples($id);
     return $rows;
 }
+
+/**
+ * @return list of rows contenant les Tweets stockés en DB
+ */
+function fetchTweets($id){
+    $rows = dbListOfTweets($id);
+    return $rows;
+}

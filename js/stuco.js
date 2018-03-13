@@ -21,9 +21,10 @@ function initApp() {
 }
 
 /**
- * Appelé quand click sur le bouton de la boîte de connexion
- * si g_isConnected = true : on est déjà connecté et l'utilisateur doit être déconnecté
- * si g_isConnected = false : authenticate(username, password) décide si connection ou non
+ * Appelé quand click sur le bouton de la boîte de connexion : change l'interface en fonction de la
+ * variable g_isConnected :
+ *      si g_isConnected = true : on est déjà connecté et l'utilisateur doit être déconnecté
+ *      si g_isConnected = false : authenticate(username, password) décide si connection ou non
  */
 function doConnect() {
 	window.console.log("doConnect() -start/return");
@@ -32,6 +33,7 @@ function doConnect() {
 		pubs();
         $('#btConnexion').html("Connexion");
         $('#frontUsername').html("");
+        $('#page').html("");
         $('#wall').html("");
 		g_isConnected = false;
 	} else {
@@ -66,7 +68,6 @@ function authenticateCallback(response){
         connect();
     else
         alert("Mot de passe incorrect");
-
 }
 
 /**
@@ -74,16 +75,15 @@ function authenticateCallback(response){
  * Affiche la liste des Codisciple (pour l'instant l'entièreté)
  */
 function connect() {
-
+    window.console.log("authenticate () -start ")
     var logUsername=$("#logUsername");
     var logPassword=$("#logPassword");
 
     $('#btConnexion').html('Deconnexion');
-
-    var wallHeader = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Mur  de "+logUsername.val()+"  </button>";
-    $('#wall').html(wallHeader);
     logUsername.val("");
     logPassword.val("");
+
+    window.console.log("ajax -> bl/fetchCodisciples.php");
 
     g_isConnected = true;
     $.ajax({
@@ -91,6 +91,7 @@ function connect() {
         url : 'bl/fetchCodisciples.php',
         success : fetchCodisciplesCallback
     });
+
 
 
 }
@@ -113,40 +114,80 @@ function fetchCodisciplesCallback(ret) {
         }
     }catch (err){window.console.log("fetchCoDisciplesCallBack -err = "+err);}
     affiche+="</div>";
+
     $('#page').html(affiche);
+
+
 
     window.console.log("fetchCodisciplesCallback(ret) -start");
 }
 
 
-
-/**
- * Charge le mur d’un coDisciple
- * @param id id du coDisciple
- * @param alias username du coDisciple
- * @returns Affiche le mur du coDisciple dans $('#wall')
- */
-function wallCoDisciple(id, alias) {
-    // il faut aller chercher tous les tweets du wall_owner
-    // $.ajax({
-    //     type :'GET',
-    //     url : 'bl/fetchTweet.php',
-    //     data : "id="+id,
-    //     success : wallCoDiscipleCallback
-    // });
-
-
-}
-
-
-function wallCoDiscipleCallback(tweets)
+function wallCoDisciple(id)
 {
-    // TODO
-    var jarray = $.parseJSON(tweets);
+    window.console.log("wallCoDisciple() - start Ajax -> bl/fetchTweets.php");
 
-
+    $.ajax({
+        type :'GET',
+        url : 'bl/fetchTweets.php',
+        data : 'id='+id,
+        success : fetchTweetsCallback
+    });
 
 }
+
+function fetchTweetsCallback(tweets)
+{
+    window.console.log("wallCoDiscipleCallBack() - start");
+    try
+    {
+        var jarray = $.parseJSON(tweets);
+        var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Mur  de" +
+            jarray['wall_owner_id']+" </button>";
+
+        for (var i = 0 ; i < jarray.length ; i++)
+        {
+            var row= jarray[i];
+            var id = row['id'];
+            var tweet = row['tweet_content'];
+            var ligne = "<button class='list-group-item list-group-item-action' id='tw"+id+"' >";
+            ligne+= id+" : "+tweet+"</button>";
+            affiche += ligne;
+        }
+
+        // ajouter la div de fin correspondante a celle utilisée lors de l'initialisation de affiche
+        affiche+="</div>";
+        $('#wall').html(affiche);
+    }
+    catch (err)
+    {
+        window.console.log("wallCodiscipleCallBack() -err = "+err);
+    }
+
+}
+
+/*
+
+
+function fetchUsername(id)
+{
+    window.console.log("fetchUsername() - start");
+
+    $.ajax(
+        {
+            type:'GET',
+            url : 'bl/fetchUsername.php',
+            data : 'id='+id,
+            success : fetchUsernameCallback
+        }
+    )
+}
+
+function fetchUsernameCallback(username)
+{
+    return username;
+}
+*/
 
 /**
  * Recupère les pubs par une requête Ajax vers le server

@@ -6,7 +6,8 @@ require_once 'connect.php' ;
  * @param String $password
  * @return NULL si pas trouvé | l'id si ok | NULL si Exception
  */
-function dbReadLogin($username,$password){
+function dbReadLogin($username,$password)
+{
 
    //query
    $sql="SELECT id FROM login WHERE username='$username' AND password='$password'";
@@ -28,7 +29,31 @@ function dbReadLogin($username,$password){
    }
 }
 
-
+/**
+ * @return null en cas d'exception | String username associé à l'id
+ * @param int $id : id du user dont on veut le username
+ */
+function dbFetchUsername($id)
+{
+    //query
+    $sql="SELECT username FROM login WHERE id = '$id'";
+    //
+    try {
+        $pdo = getPDO();
+        $row = $pdo->query($sql)->fetch();
+        //fermer la connexion
+        $pdo=null;
+        //return
+        if(!$row)
+            return NULL;
+        else
+            $username = $row['username'];
+        return $username;
+    }
+    catch (Exception $error) {
+        return NULL;
+    }
+}
 /**
  * @return null en cas d'exception | L'ensemble des coDisciple stockés en DB
  * @param int $id : id du user dont on demande la liste des coDisciples
@@ -43,5 +68,18 @@ function dbListOfCodisciples($id){
         $pdo=null;
         return $rows;
     }catch (PDOException $erreur){return NULL;}
+}
 
+/**
+ * @return null en cas d'exception | L'ensemble des coDisciple stockés en DB
+ * @param int $id : id du user dont on demande la liste des coDisciples
+ */
+function dbListOfTweets($id){
+    $sql="SELECT * from tweet where wall_owner_id = '$id'";
+    try{
+        $pdo = getPDO();
+        $rows = $pdo->query($sql)->fetchAll();
+        $pdo=null;
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
 }
