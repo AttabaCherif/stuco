@@ -1,25 +1,20 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: matthias
- * Date: 13/03/2018
- * Time: 16:17
- */
-
 
 require_once 'bl.php';
-$requested_id=utf8_encode($_REQUEST['id']);
+$id_wanted=utf8_encode($_REQUEST['id']);
 
 session_start();
 $id = $_SESSION['uid'];
 
-// récupère un array php des tweets
-$ret = dbfetchUsername($requested_id);
-
-
-if(!$rows) $ret=NULL;
+// si m'id voulue est 0 alors prendre l'id du user connecté
+if($id_wanted==0)
+    $rows = fetchUsername($id);
 else
-{
-    echo $ret;
-}
+    $rows = fetchUsername($id_wanted);
 
+if(!$rows)
+    $ret=NULL;
+else
+    $ret=$rows;
+
+echo $ret;

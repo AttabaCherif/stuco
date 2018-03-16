@@ -7,7 +7,7 @@ session_start();
 $id = $_SESSION['uid'];
 
 // récupère un array php des tweets
-if($id==0)
+if($wall_owner_id==0)
     $rows = fetchTweets($id);
 else
     $rows = fetchTweets($wall_owner_id);

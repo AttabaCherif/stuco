@@ -75,7 +75,7 @@ function dbListOfCodisciples($id){
  * @param int $id : id du user dont on demande la liste des coDisciples
  */
 function dbListOfTweets($id){
-    $sql="SELECT * from tweet where wall_owner_id = '$id'";
+    $sql="SELECT login.username, tweet.id, tweet.tweet_content, tweet.wall_owner_id, tweet.writer_id FROM tweet,login WHERE tweet.wall_owner_id =  '$id' and tweet.writer_id = login.id";
     try{
         $pdo = getPDO();
         $rows = $pdo->query($sql)->fetchAll();

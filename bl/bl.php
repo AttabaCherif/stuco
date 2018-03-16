@@ -48,3 +48,13 @@ function fetchTweets($id){
     $rows = dbListOfTweets($id);
     return $rows;
 }
+
+/**
+ * @return string  contenant le username associé à id en DB
+ * @param int id login
+ */
+function fetchUsername($id)
+{
+    $rows = dbFetchUsername($id);
+    return $rows;
+}

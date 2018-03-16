@@ -6,6 +6,7 @@
 var g_username;
 var g_password;
 var g_isConnected;
+var g_wall // id du user dont le wall est affiché
 
 
 /**
@@ -89,9 +90,12 @@ function connect()
     g_isConnected = true;
 
     fetchCodisciples();
-    wallCoDisciple(0);
+    fetchTweets(0);
 }
 
+/**
+ * Prepare une requete ajax pour récupéré la liste des coDiscpliples
+ */
 function fetchCodisciples()
 {
     window.console.log("fetchCodisciples() - start Ajax -> bl/fetchCodisciples.php");
@@ -102,7 +106,12 @@ function fetchCodisciples()
     });
 }
 
-function fetchCodisciplesCallback(ret) {
+/**
+ * affiche dans page la liste des coDispliples
+ * @param ret : liste JSON des coDisciples
+ */
+function fetchCodisciplesCallback(ret)
+{
     window.console.log("fetchCodisciplesCallback(ret) -start");
     try{
         var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >List des co' disciples </button>";
@@ -113,7 +122,7 @@ function fetchCodisciplesCallback(ret) {
             var id = row['id'];
             var username = row['username'];
             var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
-                "' onclick='wallCoDisciple(this.id.substring(2),this.innerHTML);'"+
+                "' onclick='fetchTweets(this.id.substring(2),this.innerHTML);'"+
             " onmousemove='overElement(this);' onmouseout='outElement(this);'>"
             ligne+= username+"</button>";
             affiche += ligne;
@@ -123,15 +132,18 @@ function fetchCodisciplesCallback(ret) {
 
     $('#page').html(affiche);
 
-
-
     window.console.log("fetchCodisciplesCallback(ret) -start");
 }
 
-
-function wallCoDisciple(id)
+/**
+ * Récupère la liste des tweets associées à un id login donnée
+ * @param id : id du propriétaire du mur
+ */
+function fetchTweets(id)
 {
-    window.console.log("wallCoDisciple() - start Ajax -> bl/fetchTweets.php");
+    window.console.log("fetchTweets() - start Ajax -> bl/fetchTweets.php");
+
+    g_wall = id;
 
     $.ajax({
         type :'GET',
@@ -142,56 +154,156 @@ function wallCoDisciple(id)
 
 }
 
+/**
+ * Affiche la liste des tweets dans le wall
+ * @param tweets
+ */
 function fetchTweetsCallback(tweets)
 {
     window.console.log("wallCoDiscipleCallBack() - start");
-    try
+    var affiche = "<div class='list-group'><button type='button' id='wallTitle' class='custom-list-group list-group-item list-group-item-action active' ></button>"
+    if (!tweets)
     {
-        var jarray = $.parseJSON(tweets);
-        // var lol = jarray[0];
-        var wall_owner = (jarray[0])['wall_owner_id'];
-        var affiche = "<div id='wall_list_title' class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Mur  de "+wall_owner+" </button>";
-
-        for (var i = 0 ; i < jarray.length ; i++)
+        affiche +="<button class='list-group-item list-group-item-action'>Aucun tweet :(</button></div>";
+    }
+    else
+    {
+        try
         {
-            var row= jarray[i];
-            var id = row['id'];
-            var tweet = row['tweet_content'];
-            var ligne = "<button class='list-group-item list-group-item-action' id='tw"+id+"' >";
-            ligne+= id+" : "+tweet+"</button>";
-            affiche += ligne;
+            var jarray = $.parseJSON(tweets);
+            for (var i = 0 ; i < jarray.length ; i++)
+            {
+                var row= jarray[i];
+                var id = row['id'];
+                var tweet = row['tweet_content'];
+                var writer = row['username'];
+                // ajout de
+                var ligne = "<button class='list-group-item list-group-item-action' id='tw"+id+"' >";
+                ligne+= writer+" : "+tweet+"</button>";
+                affiche += ligne;
+            }
+            affiche+="</div>";
         }
-
-        // ajouter la div de fin correspondante a celle utilisée lors de l'initialisation de affiche
-        affiche+="</div>";
-        $('#wall').html(affiche);
+        catch (err)
+        {
+            window.console.log("wallCodiscipleCallBack() -err = "+err);
+        }
     }
-    catch (err)
-    {
-        window.console.log("wallCodiscipleCallBack() -err = "+err);
-    }
-
+    $('#wall').html(affiche);
+    wallTitle(g_wall);
 }
 
-/*
+/**
+ * Prépare la requete ajax pour changer le nom du mur courant
+ * @param id du propriétaire du mur
+ */
+function wallTitle(id)
+{
+    $.ajax({
+        type :'GET',
+        url : 'bl/fetchUsername.php',
+        data : 'id='+id,
+        success : wallTitleCallback
+    });
+}
 
+/**
+ * Affiche le nom du propriétaire du mur
+ * @param username : nom du propriétaire du  mur
+ */
+function wallTitleCallback(username)
+{
+    $('#wallTitle').html("Mur de "+username);
+}
 
-*/
+/**
+ * Prepare la requete ajax pour récupérer la liste des tweets supprimables
+ */
+function displayTweetDelete()
+{
+    window.console.log("displayTweetDelete() ajax -> bl/fetchTweets.php ");
+
+    $.ajax({
+        type :'GET',
+        url : 'bl/fetchTweets.php',
+        data : 'id='+0,
+        success : displayTweetDeleteCallback
+    });
+}
+
+/**
+ * Affiche la liste des tweets supprimables dans le wall
+ */
+function displayTweetDeleteCallback(tweets)
+{
+    window.console.log("displayTweetDeleteCallback() - start");
+    var affiche = "<div class='list-group'><button type='button' id='wallTitle' class='custom-list-group list-group-item list-group-item-action active' ></button>"
+    if (!tweets)
+    {
+        affiche +="<button class='list-group-item list-group-item-action'>Aucun tweet :(</button></div>";
+    }
+    else
+    {
+        try
+        {
+            var jarray = $.parseJSON(tweets);
+            for (var i = 0 ; i < jarray.length ; i++)
+            {
+                var row= jarray[i];
+                var id = row['id'];
+                var tweet = row['tweet_content'];
+                var writer = row['username'];
+                // ajout de
+                var ligne = "<button class='list-group-item list-group-item-action' id='tw"+id+"' >";
+                ligne+= writer+" : "+tweet+"</button>"+
+                    "<span id='bouton-envoyer' class='input-group-addon btn btn-primary'>Supprimer</span>";
+                affiche += ligne;
+            }
+            affiche+="</div>";
+        }
+        catch (err)
+        {
+            window.console.log("wallCodiscipleCallBack() -err = "+err);
+        }
+    }
+    $('#wall').html(affiche);
+    wallTitle(g_wall);
+
+    //ue fois la liste des id récupérer modifier les element twID pour ajouter un bouton supprimer
+
+}
+/**
+ * Affiche un formulaire d'écriture de tweet
+ * @param (int) g_wall : id du user sur lequel on écrit un tweet
+ */
+function displayTweetPrompt()
+{
+    // il faut remplacer la div des tweet par un formulaire
+    var affiche = "<div class='list-group'><button type='button' id='wallTitle' class='custom-list-group list-group-item list-group-item-action active' ></button>";
+
+    affiche+="<br/><div class='input-group'>" +
+                "<textarea class='form-control custom-control' rows='3' style='resize:none'></textarea>" +
+                "<span id='bouton-envoyer' class='input-group-addon btn btn-primary'>Envoyer</span>" +
+             "</div>";
+
+    affiche+="</div>";
+    $('#wall').html(affiche);
+    wallTitle(g_wall);
+}
 
 /**
  * Recupère les pubs par une requête Ajax vers le server
  * @return pubsCallback(publicite)
  */
 function pubs() {
-	window.console.log("pubs() -start");
+    window.console.log("pubs() -start");
 
-	$.ajax({
-		type : 'GET',
-		url : 'bl/getPubs.php',
-		success : pubsCallback
-	});
+    $.ajax({
+        type : 'GET',
+        url : 'bl/getPubs.php',
+        success : pubsCallback
+    });
 
-	window.console.log("pubs() -end");
 }
 
 /**
@@ -208,9 +320,7 @@ function pubsCallback(publicite) {
     }
     pubHTML += "</div>"
     document.getElementById("wall").innerHTML = pubHTML;
-    window.console.log("pubsCallback() -stop");
 }
-
 
 /**
  * @param e
