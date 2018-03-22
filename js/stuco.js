@@ -13,7 +13,8 @@ var g_wall // id du user dont le wall est affiché
  * Réinitialise les variables globales
  * Appelé à la fin du chargement de la page et quand nécessaire
  */
-function initApp() {
+function initApp()
+{
 	window.console.log("initApp() -start");
 	g_isConnected = false;
 	g_username = "";
@@ -27,7 +28,8 @@ function initApp() {
  *      si g_isConnected = true : on est déjà connecté et l'utilisateur doit être déconnecté
  *      si g_isConnected = false : authenticate(username, password) décide si connection ou non
  */
-function doConnect() {
+function doConnect()
+{
 	window.console.log("doConnect() -start/return");
 
 	if (g_isConnected) {
@@ -37,7 +39,9 @@ function doConnect() {
 	}
 }
 
-
+/**
+ * Prépare la requête Ajax pour détruire la session en cours
+ */
 function disconnect()
 {
     $.ajax({
@@ -47,13 +51,18 @@ function disconnect()
     })
 }
 
+/**
+ * Affiche les pubs et supprime le contenu du mur et de la page. Si ret est false, un message
+ * d'erreur s'affiche
+ * @param ret (boolean)
+ *
+ */
 function disconnectCallback(ret)
 {
     if(ret)
     {
         pubs();
         $('#btConnexion').html("Connexion");
-        $('#frontUsername').html("");
         $('#page').html("");
         $('#wall').html("");
         g_isConnected = false;
@@ -61,18 +70,19 @@ function disconnectCallback(ret)
     else
         alert("Problème lors de la déconnexion");
         $('#btConnexion').html("Connexion");
-        $('#frontUsername').html("");
         $('#page').html("");
         $('#wall').html("");
         g_isConnected = false;
 }
+
 /**
  * authentifie un login = (username, password) par une requête Ajax vers le server
  * @param username : nom d'utilisateur
  * @param password : mot de passe
  * @return authentificateCallback(responses)
  */
-function authenticate(username, password) {
+function authenticate(username, password)
+{
     window.console.log("authenticate("+username+","+password+") -start Ajax");
 
     $.ajax({
@@ -88,7 +98,8 @@ function authenticate(username, password) {
 * Réalise l'affichage en fonction de la valeur de retour de authenticate
  * @param response : 1 ou 0 selon réussite ou echec du log in
 * */
-function authenticateCallback(response){
+function authenticateCallback(response)
+{
     if(response)
         connect();
     else
@@ -154,7 +165,7 @@ function fetchCodisciplesCallback(ret)
             var id = row['id'];
             var username = row['username'];
             var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
-                "' onclick='fetchTweets(this.id.substring(2),this.innerHTML);'"+
+                "' onclick='fetchTweets(this.id.substring(2));'"+
             " onmousemove='overElement(this);' onmouseout='outElement(this);'>"
             ligne+= username+"</button>";
             affiche += ligne;
@@ -302,7 +313,7 @@ function displayTweetDeleteCallback(tweets)
                 // ajout de
                 var ligne = "<button class='list-group-item list-group-item-action' id='tw"+id+"' >";
                 ligne+= writer+" : "+tweet+"</button>"+
-                    "<span id='dl"+id+"' class='input-group-addon btn btn-primary boutons-perso'>Supprimer</span>";
+                    "<span id='dl"+id+"' onclick='deleteTweet(this.id.substring(2))' class='input-group-addon btn btn-primary boutons-perso'>Supprimer</span>";
                 affiche += ligne;
             }
             affiche+="</div>";
@@ -343,6 +354,10 @@ function displayTweetPrompt()
         return ;
     }
 }
+
+/**
+ * Prépare la requete Ajax pour écrire le tweet sur le mur du coDisciple en cours
+ */
 function writeTweet()
 {
     console.log("writeTweet() ajax -> bl/writeTweet START");
@@ -358,6 +373,10 @@ function writeTweet()
     console.log("writeTweet() ajax -> bl/writeTweet STOP");
 }
 
+/**
+ * Si ret = 1, on affiche les tweets du mur, sinon on affiche un message d'erreur
+ * @param ret (int) : nombre de ligne modifié lors de l'insertion du tweet
+ */
 function writeTweetCallback(ret)
 {
     if(ret)
@@ -366,11 +385,28 @@ function writeTweetCallback(ret)
         alert("Votre tweet n'a pas pu être inséré");
 }
 
+
+function deleteTweet(id)
+{
+    $.ajax({
+        type : 'GET',
+        url : 'bl/deleteTweet.php',
+        data : 'id='+id,
+        success : deleteTweetCallback
+    })
+}
+
+function deleteTweetCallback(ret)
+{
+    displayTweetDelete()
+}
+
 /**
  * Recupère les pubs par une requête Ajax vers le server
  * @return pubsCallback(publicite)
  */
-function pubs() {
+function pubs()
+{
     window.console.log("pubs() -start");
 
     $.ajax({
@@ -386,7 +422,8 @@ function pubs() {
  * Affiche la publicité sur le mur
  * @param publicite : une string contenant la liste des pubs séparée par #
  * */
-function pubsCallback(publicite) {
+function pubsCallback(publicite)
+{
     window.console.log("pubsCallback()");
 
     var pubs = publicite.split("#");
@@ -403,7 +440,8 @@ function pubsCallback(publicite) {
  * fonction déclenchée par le survole sur d'un élement  (event  : onmousemove)
  * Affiche : un pointeur de selection
  */
-function overElement(e){
+function overElement(e)
+{
 	e.style.cursor="pointer";
 }
 
@@ -412,6 +450,7 @@ function overElement(e){
  * fonction déclenchée par le survole hors d'un élément (event  : onmouseout)
  * Affiche : le pointeur par défault
  */
-function outElement(e){
+function outElement(e)
+{
 	e.style.cursor="default";
 }

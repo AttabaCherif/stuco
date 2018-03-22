@@ -68,9 +68,13 @@ function fetchUsername($id)
  */
 function writeTweet($writer_id,$wall_owner_id,$tweet_content)
 {
-    $response=dbWriteTweet($writer_id,$wall_owner_id,$tweet_content);
-    return $response;
+    $ret=dbWriteTweet($writer_id,$wall_owner_id,$tweet_content);
+    return $ret;
 }
 
-
+function deleteTweet($tweet_id)
+{
+    $ret=dbDeleteTweet($tweet_id);
+    return $ret;
+}
 

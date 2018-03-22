@@ -103,3 +103,17 @@ function dbWriteTweet($writer_id,$wall_owner_id,$tweet_content)
         return $rows;
     }catch (PDOException $erreur){return NULL;}
 }
+
+
+function dbDeleteTweet($tweet_id)
+{
+    $sql="DELETE FROM tweet WHERE id='$tweet_id'";
+    try
+    {
+        $pdo = getPDO();
+        $rows = $pdo->exec($sql);
+        $pdo=null;
+
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+}
