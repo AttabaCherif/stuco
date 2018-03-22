@@ -22,8 +22,9 @@ TODO
 
 BUG
 ---
-
-* parfois le nom du propriétaire du mur ne s'affiche pas
+* g_wall n'est pas initialisé correctement
+* Impossible d'ecrire sur son propre mur...
+* parfois le nom du propriétaire du mur ne s'affiche pas [RESOLVED]
 
 old questions/rem
 -----------------

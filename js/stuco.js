@@ -31,17 +31,37 @@ function doConnect() {
 	window.console.log("doConnect() -start/return");
 
 	if (g_isConnected) {
-		pubs();
-        $('#btConnexion').html("Connexion");
-        $('#frontUsername').html("");
-        $('#page').html("");
-        $('#wall').html("");
-		g_isConnected = false;
-	} else {
+        disconnect();
+    } else {
 		authenticate($('#logUsername').val(),$('#logPassword').val());
 	}
 }
 
+
+function disconnect()
+{
+    pubs();
+    $('#btConnexion').html("Connexion");
+    $('#frontUsername').html("");
+    $('#page').html("");
+    $('#wall').html("");
+    g_isConnected = false;
+
+
+    $.ajax({
+        type:'GET',
+        url:'bl/disconnect.php',
+        success:disconnectCallback
+    })
+}
+
+function disconnectCallback(ret)
+{
+    if(ret)
+        alert("Déconnexion réussie !");
+    else
+        alert("Déconnexion FOIREE");
+}
 /**
  * authentifie un login = (username, password) par une requête Ajax vers le server
  * @param username : nom d'utilisateur
@@ -98,12 +118,20 @@ function connect()
  */
 function fetchCodisciples()
 {
-    window.console.log("fetchCodisciples() - start Ajax -> bl/fetchCodisciples.php");
-    $.ajax({
-        type :'GET',
-        url : 'bl/fetchCodisciples.php',
-        success : fetchCodisciplesCallback
-    });
+    if(g_isConnected)
+    {
+        window.console.log("fetchCodisciples() - start Ajax -> bl/fetchCodisciples.php");
+        $.ajax({
+            type :'GET',
+            url : 'bl/fetchCodisciples.php',
+            success : fetchCodisciplesCallback
+        });
+    }
+    else
+    {
+        return;
+    }
+
 }
 
 /**
@@ -141,17 +169,24 @@ function fetchCodisciplesCallback(ret)
  */
 function fetchTweets(id)
 {
-    window.console.log("fetchTweets() - start Ajax -> bl/fetchTweets.php");
+    if(g_isConnected)
+    {
+        window.console.log("fetchTweets() - start Ajax -> bl/fetchTweets.php");
 
-    g_wall = id;
+        g_wall = id;
 
-    $.ajax({
-        type :'GET',
-        url : 'bl/fetchTweets.php',
-        data : 'id='+id,
-        success : fetchTweetsCallback
-    });
+        $.ajax({
+            type :'GET',
+            url : 'bl/fetchTweets.php',
+            data : 'id='+id,
+            success : fetchTweetsCallback
+        });
 
+
+    }else
+    {
+        return;
+    }
 }
 
 /**
@@ -164,7 +199,7 @@ function fetchTweetsCallback(tweets)
     var affiche = "<div class='list-group'><button type='button' id='wallTitle' class='custom-list-group list-group-item list-group-item-action active' ></button>"
     if (!tweets)
     {
-        affiche +="<button class='list-group-item list-group-item-action'>Aucun tweet :(</button></div>";
+        affiche +="<button class='list-group-item list-group-item-action'>Aucun Tweet :(</button></div>";
     }
     else
     {
@@ -221,14 +256,21 @@ function wallTitleCallback(username)
  */
 function displayTweetDelete()
 {
-    window.console.log("displayTweetDelete() ajax -> bl/fetchTweets.php ");
+    if(g_isConnected)
+    {
+        window.console.log("displayTweetDelete() ajax -> bl/fetchTweets.php ");
 
-    $.ajax({
-        type :'GET',
-        url : 'bl/fetchTweets.php',
-        data : 'id='+0,
-        success : displayTweetDeleteCallback
-    });
+        $.ajax({
+            type :'GET',
+            url : 'bl/fetchTweets.php',
+            data : 'id='+0,
+            success : displayTweetDeleteCallback
+        });
+
+    }else
+    {
+        return ;
+    }
 }
 
 /**
@@ -256,7 +298,7 @@ function displayTweetDeleteCallback(tweets)
                 // ajout de
                 var ligne = "<button class='list-group-item list-group-item-action' id='tw"+id+"' >";
                 ligne+= writer+" : "+tweet+"</button>"+
-                    "<span id='bouton-envoyer' class='input-group-addon btn btn-primary'>Supprimer</span>";
+                    "<span id='dl"+id+"' class='input-group-addon btn btn-primary boutons-perso'>Supprimer</span>";
                 affiche += ligne;
             }
             affiche+="</div>";
@@ -270,25 +312,54 @@ function displayTweetDeleteCallback(tweets)
     wallTitle(g_wall);
 
     //ue fois la liste des id récupérer modifier les element twID pour ajouter un bouton supprimer
-
 }
+
 /**
- * Affiche un formulaire d'écriture de tweet
- * @param (int) g_wall : id du user sur lequel on écrit un tweet
+ * Affiche un formulaire d'écriture de Tweet
+ * @param (int) g_wall : id du user sur lequel on écrit un Tweet
  */
 function displayTweetPrompt()
 {
-    // il faut remplacer la div des tweet par un formulaire
-    var affiche = "<div class='list-group'><button type='button' id='wallTitle' class='custom-list-group list-group-item list-group-item-action active' ></button>";
+    if(g_isConnected)
+    {
+        // il faut remplacer la div des Tweet par un formulaire
+        var affiche = "<div class='list-group'><button type='button' id='wallTitle' class='custom-list-group list-group-item list-group-item-action active' ></button>";
 
-    affiche+="<br/><div class='input-group'>" +
-                "<textarea class='form-control custom-control' rows='3' style='resize:none'></textarea>" +
-                "<span id='bouton-envoyer' class='input-group-addon btn btn-primary'>Envoyer</span>" +
-             "</div>";
+        affiche+="<br/><div class='input-group'>" +
+            "<textarea id='tweetContent' class='form-control custom-control' rows='3' style='resize:none'></textarea>" +
+            "<span onclick='writeTweet()' class='input-group-addon btn btn-primary boutons-perso'>Tweeter</span>" +
+            "</div>";
 
-    affiche+="</div>";
-    $('#wall').html(affiche);
-    wallTitle(g_wall);
+        affiche+="</div>";
+        $('#wall').html(affiche);
+        wallTitle(g_wall);
+
+    }else
+    {
+        return ;
+    }
+}
+function writeTweet()
+{
+    console.log("writeTweet() ajax -> bl/writeTweet START");
+    var tweet_content = $('#tweetContent').val();
+    var wall_owner_id = g_wall;
+
+    $.ajax({
+        type: 'GET',
+        url: 'bl/writeTweet.php',
+        data:'tweet_content='+tweet_content+'&wall_owner_id='+wall_owner_id,
+        success:writeTweetCallback
+    })
+    console.log("writeTweet() ajax -> bl/writeTweet STOP");
+}
+
+function writeTweetCallback(ret)
+{
+    if(ret)
+        fetchTweets(g_wall);
+    else
+        alert("Votre tweet n'a pas pu être inséré");
 }
 
 /**
@@ -303,6 +374,7 @@ function pubs() {
         url : 'bl/getPubs.php',
         success : pubsCallback
     });
+    window.console.log("pubs() -end");
 
 }
 
@@ -311,7 +383,7 @@ function pubs() {
  * @param publicite : une string contenant la liste des pubs séparée par #
  * */
 function pubsCallback(publicite) {
-    window.console.log("pubsCallback() -start");
+    window.console.log("pubsCallback()");
 
     var pubs = publicite.split("#");
     var pubHTML = '<div id="pubs">';

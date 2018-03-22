@@ -83,3 +83,23 @@ function dbListOfTweets($id){
         return $rows;
     }catch (PDOException $erreur){return NULL;}
 }
+
+/**
+ * Ecrit en DB le tweet écrit par writer_id sur wall_owner_id
+ * @param $writer_id (int) l'id de celui qui écrit
+ * @param $wall_owner_id (int) l'id du user possédant le mur
+ * @param $tweet_content (string) contenu du tweet
+ * @return (int) nombre de ligne affecté ou null si error
+ */
+function dfWriteTweet($writer_id,$wall_owner_id,$tweet_content)
+{
+    $sql="INSERT INTO tweet (writer_id,wall_owner_id,tweet_content) VALUES ('$writer_id','$wall_owner_id','$tweet_content')";
+    try
+    {
+        $pdo = getPDO();
+        $rows = $pdo->exec($sql);
+        $pdo=null;
+
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+}

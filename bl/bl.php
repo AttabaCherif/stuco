@@ -58,3 +58,19 @@ function fetchUsername($id)
     $rows = dbFetchUsername($id);
     return $rows;
 }
+
+/**
+ * Ecrit en DB le tweet écrit par writer_id sur wall_owner_id
+ * @param $writer_id (int) l'id de celui qui écrit
+ * @param $wall_owner_id (int) l'id du user possédant le mur
+ * @param $tweet_content (string) contenu du tweet
+ * @return (int) nombre de ligne affecté ou NULL si error
+ */
+function writeTweet($writer_id,$wall_owner_id,$tweet_content)
+{
+    $response=dfWriteTweet($writer_id,$wall_owner_id,$tweet_content);
+    return $response;
+}
+
+
+

@@ -6,7 +6,7 @@ $id_wanted=utf8_encode($_REQUEST['id']);
 session_start();
 $id = $_SESSION['uid'];
 
-// si m'id voulue est 0 alors prendre l'id du user connecté
+// si id_wanted est 0 alors prendre l'id du user connecté
 if($id_wanted==0)
     $rows = fetchUsername($id);
 else
