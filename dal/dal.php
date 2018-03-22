@@ -91,7 +91,7 @@ function dbListOfTweets($id){
  * @param $tweet_content (string) contenu du tweet
  * @return (int) nombre de ligne affecté ou null si error
  */
-function dfWriteTweet($writer_id,$wall_owner_id,$tweet_content)
+function dbWriteTweet($writer_id,$wall_owner_id,$tweet_content)
 {
     $sql="INSERT INTO tweet (writer_id,wall_owner_id,tweet_content) VALUES ('$writer_id','$wall_owner_id','$tweet_content')";
     try

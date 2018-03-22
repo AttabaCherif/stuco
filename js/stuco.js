@@ -40,14 +40,6 @@ function doConnect() {
 
 function disconnect()
 {
-    pubs();
-    $('#btConnexion').html("Connexion");
-    $('#frontUsername').html("");
-    $('#page').html("");
-    $('#wall').html("");
-    g_isConnected = false;
-
-
     $.ajax({
         type:'GET',
         url:'bl/disconnect.php',
@@ -58,9 +50,21 @@ function disconnect()
 function disconnectCallback(ret)
 {
     if(ret)
-        alert("Déconnexion réussie !");
+    {
+        pubs();
+        $('#btConnexion').html("Connexion");
+        $('#frontUsername').html("");
+        $('#page').html("");
+        $('#wall').html("");
+        g_isConnected = false;
+    }
     else
-        alert("Déconnexion FOIREE");
+        alert("Problème lors de la déconnexion");
+        $('#btConnexion').html("Connexion");
+        $('#frontUsername').html("");
+        $('#page').html("");
+        $('#wall').html("");
+        g_isConnected = false;
 }
 /**
  * authentifie un login = (username, password) par une requête Ajax vers le server
