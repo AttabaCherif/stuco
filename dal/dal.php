@@ -104,7 +104,11 @@ function dbWriteTweet($writer_id,$wall_owner_id,$tweet_content)
     }catch (PDOException $erreur){return NULL;}
 }
 
-
+/**
+ * Supprimer en DB le tweet dont l'id est donné en parametre
+ * @param $tweet_id (int) : id du tweet à supprimer
+ * @return le nombre d'enregistrement modifié en DB
+ */
 function dbDeleteTweet($tweet_id)
 {
     $sql="DELETE FROM tweet WHERE id='$tweet_id'";
@@ -116,4 +120,39 @@ function dbDeleteTweet($tweet_id)
 
         return $rows;
     }catch (PDOException $erreur){return NULL;}
+}
+
+
+function dbDeleteCodisciple($user_id, $coDisciple_id)
+{
+    $sql="DELETE FROM approval WHERE (owner_id = '$user_id' AND guest_id='$coDisciple_id') OR (owner_id ='$coDisciple_id' AND guest_id= '$user_id') AND current_status = 1";
+    try
+    {
+        $pdo = getPDO();
+        $rows = $pdo->exec($sql);
+        $pdo=null;
+
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+}
+
+/**
+ * Récupère en DB les user dont le nom est $name et qui n'ont aucune approbation en cours avec le user courant
+ * @param $name : nom recherché
+ * @param $user_id : id du user courant
+ * @return la liste des coDisciples du nom demandé, sans lien d'approbation en cours
+ */
+function dbfetchRequestedCodisciples($name,$user_id)
+{
+
+    $sql="SELECT login.id, login.username FROM login WHERE login.id NOT IN (SELECT l.id FROM login l , approval a WHERE ((l.id = a.owner_id AND '$user_id' = a.guest_id) OR (l.id = a.guest_id AND '$user_id' = a.owner_id))) AND login.username = '$name' ";
+    try
+    {
+        $pdo = getPDO();
+        $rows = $pdo->query($sql)->fetchAll();
+        $pdo=null;
+
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+
 }

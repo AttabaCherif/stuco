@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="390" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="315" mnemonic="2" />
-    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="167" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="159" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="536" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="417" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edaa7db6-38bd-45be-97ee-fcabb11a3239" name="Default" comment="" />
@@ -20,40 +20,31 @@
       <file leaf-file-name="stuco.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/stuco.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="396" column="1" lean-forward="true" selection-start-line="396" selection-start-column="1" selection-end-line="396" selection-end-column="1" />
+            <state relative-caret-position="465">
+              <caret line="545" column="83" lean-forward="true" selection-start-line="545" selection-start-column="83" selection-end-line="545" selection-end-column="83" />
               <folding>
-                <marker date="1521745681598" expanded="false" signature="9227:9238" ph="..." />
+                <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
+                <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deleteTweet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bl/deleteTweet.php">
+      <file leaf-file-name="fetchRequestedCodisciples.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bl/fetchRequestedCodisciples.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="136">
+              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="writeTweet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bl/writeTweet.php">
+      <file leaf-file-name="fetchCodisciples.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bl/fetchCodisciples.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="51" column="94" lean-forward="false" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="94" />
+            <state relative-caret-position="153">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -62,8 +53,8 @@
       <file leaf-file-name="bl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bl/bl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+            <state relative-caret-position="576">
+              <caret line="100" column="18" lean-forward="false" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -72,16 +63,39 @@
       <file leaf-file-name="dal.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dal/dal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="100" column="18" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+            <state relative-caret-position="103">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
-                <marker date="1521745958318" expanded="true" signature="251:323" ph="SELECT id FR... login" />
-                <marker date="1521745958318" expanded="true" signature="820:863" ph="SELECT usern... login" />
-                <marker date="1521745958318" expanded="true" signature="1410:1582" ph="SELECT l.id,... login" />
-                <marker date="1521745958318" expanded="true" signature="1956:2129" ph="SELECT login... tweet" />
-                <marker date="1521745958318" expanded="true" signature="2672:2785" ph="INSERT INTO tweet... " />
-                <marker date="1521745958318" expanded="true" signature="3001:3039" ph="DELETE FROM tweet... " />
+                <element signature="e#1759#1915#0#PHP" expanded="false" />
+                <element signature="n#dbListOfTweets#0;n#!!top" expanded="false" />
+                <element signature="e#2305#2595#0#PHP" expanded="false" />
+                <element signature="n#dbWriteTweet#0;n#!!top" expanded="false" />
+                <element signature="e#2954#3126#0#PHP" expanded="false" />
+                <element signature="n#dbDeleteTweet#0;n#!!top" expanded="false" />
+                <element signature="n#dbDeleteCodisciple#0;n#!!top" expanded="false" />
+                <marker date="1521815901736" expanded="true" signature="251:323" ph="SELECT id FR... login" />
+                <marker date="1521815901736" expanded="true" signature="820:863" ph="SELECT usern... login" />
+                <marker date="1521815901736" expanded="true" signature="1410:1582" ph="SELECT l.id,... login" />
+                <marker date="1521815901736" expanded="true" signature="4118:4126" ph="SELECT l.id,... login" />
+                <marker date="1521815901736" expanded="true" signature="4118:4329" ph="SELECT login... login" />
+                <marker date="1521815901736" expanded="true" signature="4118:4333" ph="SELECT login... login" />
+                <marker date="1521815901736" expanded="true" signature="4118:4358" ph="SELECT login... login" />
+                <marker date="1521815901736" expanded="true" signature="4118:4399" ph="SELECT login... login" />
+                <marker date="1521815901736" expanded="true" signature="4184:4328" ph="SELECT l.id login" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="119">
+                <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -90,8 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>page</find>
-      <find>mur</find>
       <find>Mur d</find>
       <find>Mur</find>
       <find>username</find>
@@ -117,6 +129,11 @@
       <find>displayTweetDelete</find>
       <find>ajax</find>
       <find>this</find>
+      <find>list</find>
+      <find>delete</find>
+      <find>texta</find>
+      <find>display</find>
+      <find>displayTwe</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -133,17 +150,19 @@
         <option value="$PROJECT_DIR$/bl/RestController.php" />
         <option value="$PROJECT_DIR$/bl/StucoRestHandler.class.php" />
         <option value="$PROJECT_DIR$/bl/fetchTweets.php" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/style.css" />
         <option value="$PROJECT_DIR$/bl/fetchUsername.php" />
         <option value="$PROJECT_DIR$/bl/authenticate.php" />
         <option value="$PROJECT_DIR$/dal/connect.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/bl/disconnect.php" />
         <option value="$PROJECT_DIR$/bl/writeTweet.php" />
-        <option value="$PROJECT_DIR$/js/stuco.js" />
         <option value="$PROJECT_DIR$/bl/deleteTweet.php" />
+        <option value="$PROJECT_DIR$/bl/deleteCodisciple.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/bl/fetchRequestedCodisciples.php" />
         <option value="$PROJECT_DIR$/bl/bl.php" />
+        <option value="$PROJECT_DIR$/js/stuco.js" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dal/dal.php" />
       </list>
     </option>
@@ -158,10 +177,11 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2" />
-    <option name="width" value="1597" />
-    <option name="height" value="856" />
+    <option name="y" value="1" />
+    <option name="width" value="1022" />
+    <option name="height" value="722" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -381,6 +401,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="SearchEverywhereHistoryKey" value="this&#9;null&#9;null&#10;writeTweet&#9;FILE&#9;file://C:/xampp/htdocs/stuco/bl/writeTweet.php" />
+    <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -484,15 +505,15 @@
       <workItem from="1521129621220" duration="18804000" />
       <workItem from="1521565568120" duration="9098000" />
       <workItem from="1521740640158" duration="60000" />
-      <workItem from="1521741139018" duration="4389000" />
+      <workItem from="1521741139018" duration="19676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95660000" />
+    <option name="totallyTimeSpent" value="110947000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="0" width="1597" height="856" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="872" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -501,13 +522,14 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1416" height="672" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16129032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -522,7 +544,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1416" height="672" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -566,26 +587,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="14" lean-forward="false" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bl/authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bl/bl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -612,7 +618,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521745681598" expanded="false" signature="9227:9238" ph="..." />
+            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
+            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -665,7 +672,8 @@
         <state relative-caret-position="255">
           <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
-            <marker date="1521745681598" expanded="false" signature="9227:9238" ph="..." />
+            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
+            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -732,7 +740,8 @@
         <state relative-caret-position="1105">
           <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
           <folding>
-            <marker date="1521745681598" expanded="false" signature="9227:9238" ph="..." />
+            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
+            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -756,7 +765,8 @@
         <state relative-caret-position="2431">
           <caret line="143" column="23" lean-forward="true" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="34" />
           <folding>
-            <marker date="1521745681598" expanded="false" signature="9227:9238" ph="..." />
+            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
+            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -813,20 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bl/fetchCodisciples.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bl/RestController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -841,27 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bl/fetchUsername.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dal/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -896,59 +875,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/stuco.js">
+    <entry file="file://$PROJECT_DIR$/bl/writeTweet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="396" column="1" lean-forward="true" selection-start-line="396" selection-start-column="1" selection-end-line="396" selection-end-column="1" />
-          <folding>
-            <marker date="1521745681598" expanded="false" signature="9227:9238" ph="..." />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bl/deleteTweet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bl/writeTweet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="51" column="94" lean-forward="false" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="94" />
+        <state relative-caret-position="510">
+          <caret line="60" column="66" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/deleteCodisciple.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchUsername.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stuco.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="545" column="83" lean-forward="true" selection-start-line="545" selection-start-column="83" selection-end-line="545" selection-end-column="83" />
+          <folding>
+            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
+            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchCodisciples.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchRequestedCodisciples.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bl/bl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+        <state relative-caret-position="576">
+          <caret line="100" column="18" lean-forward="false" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dal/dal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="100" column="18" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+        <state relative-caret-position="103">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <marker date="1521745958318" expanded="true" signature="251:323" ph="SELECT id FR... login" />
-            <marker date="1521745958318" expanded="true" signature="820:863" ph="SELECT usern... login" />
-            <marker date="1521745958318" expanded="true" signature="1410:1582" ph="SELECT l.id,... login" />
-            <marker date="1521745958318" expanded="true" signature="1956:2129" ph="SELECT login... tweet" />
-            <marker date="1521745958318" expanded="true" signature="2672:2785" ph="INSERT INTO tweet... " />
-            <marker date="1521745958318" expanded="true" signature="3001:3039" ph="DELETE FROM tweet... " />
+            <element signature="e#1759#1915#0#PHP" expanded="false" />
+            <element signature="n#dbListOfTweets#0;n#!!top" expanded="false" />
+            <element signature="e#2305#2595#0#PHP" expanded="false" />
+            <element signature="n#dbWriteTweet#0;n#!!top" expanded="false" />
+            <element signature="e#2954#3126#0#PHP" expanded="false" />
+            <element signature="n#dbDeleteTweet#0;n#!!top" expanded="false" />
+            <element signature="n#dbDeleteCodisciple#0;n#!!top" expanded="false" />
+            <marker date="1521815901736" expanded="true" signature="251:323" ph="SELECT id FR... login" />
+            <marker date="1521815901736" expanded="true" signature="820:863" ph="SELECT usern... login" />
+            <marker date="1521815901736" expanded="true" signature="1410:1582" ph="SELECT l.id,... login" />
+            <marker date="1521815901736" expanded="true" signature="4118:4126" ph="SELECT l.id,... login" />
+            <marker date="1521815901736" expanded="true" signature="4118:4329" ph="SELECT login... login" />
+            <marker date="1521815901736" expanded="true" signature="4118:4333" ph="SELECT login... login" />
+            <marker date="1521815901736" expanded="true" signature="4118:4358" ph="SELECT login... login" />
+            <marker date="1521815901736" expanded="true" signature="4118:4399" ph="SELECT login... login" />
+            <marker date="1521815901736" expanded="true" signature="4184:4328" ph="SELECT l.id login" />
           </folding>
         </state>
       </provider>

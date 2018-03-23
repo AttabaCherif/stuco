@@ -5,26 +5,19 @@ stuco
 
 TODO
 ----
-
-* Ajouter tweet sur le mur courant
-    * Cliquer sur a "ajouter tweet" propose une nouvelle fenetre en bas de wall avec :
-        * textbox ecrire ici (max 140 char)
-        * valider
-    * le tout est envoyer dans DB via SQL (id_owner  = CURRENT_WALL_ID)
-
-* Supprimer tweet : 
-    afficher la liste avec un petit bouton en promo
-
-* Layout ajouter CoDisciples
-    * utiliser bootstrap form
-* Gerer la déconnexion afin d'empeche quelque de non-loggé d'accèder aux ressources 'espace membre' 
-
+* Ne selectionner que les  user sans approbations courantes
+* Gerer le retour des requested user vide
 
 BUG
 ---
-* g_wall n'est pas initialisé correctement
-* Impossible d'ecrire sur son propre mur...
+* g_wall n'est pas initialisé correctement [RESOLVED]
+* Impossible d'ecrire sur son propre mur...[RESOLVED]
 * parfois le nom du propriétaire du mur ne s'affiche pas [RESOLVED]
+
+Questions :
+-----------
+
+* doit-on supprimer les tweets des anciens amis ?
 
 old questions/rem
 -----------------

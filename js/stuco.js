@@ -175,7 +175,7 @@ function fetchCodisciplesCallback(ret)
 
     $('#page').html(affiche);
 
-    window.console.log("fetchCodisciplesCallback(ret) -start");
+    window.console.log("fetchCodisciplesCallback(ret) -stop");
 }
 
 /**
@@ -326,7 +326,82 @@ function displayTweetDeleteCallback(tweets)
     $('#wall').html(affiche);
     wallTitle(g_wall);
 
-    //ue fois la liste des id récupérer modifier les element twID pour ajouter un bouton supprimer
+    //une fois la liste des id récupérer modifier les element twID pour ajouter un bouton supprimer
+}
+
+/**
+ * prépare la requête ajax pour récupérer les coDisciples
+ */
+function displayCodisciplesDelete()
+{
+    window.console.log("displayCodisciplesDelete() - start");
+
+    if(g_isConnected)
+    {
+        window.console.log("displayCodiscipleDelete() ajax -> bl/fetchCodisciples.php ");
+
+        $.ajax({
+            type :'GET',
+            url : 'bl/fetchCodisciples.php',
+            data : 'id='+0,
+            success : displayCodisciplesDeleteCallback
+        });
+
+    }else
+    {
+        return ;
+    }
+
+}
+
+/**
+ * Affiche la liste des coDisciples avec les boutons supprimer associé
+ * @param codisciples : liste des Codisciples
+ */
+function displayCodisciplesDeleteCallback(codisciples)
+{
+    window.console.log("displayCodisciplesDeleteCallback() - start");
+    try{
+        var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >List des co' disciples </button>";
+        var jarray = $.parseJSON(codisciples);
+        for (var i = 0 ; i <jarray.length ; i++)
+        {
+            var row= jarray[i];
+            var id = row['id'];
+            var username = row['username'];
+            var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
+                "'"+" >";
+            ligne+= username+"</button>";
+            ligne+="<span id='dl"+id+"' onclick='deleteCodisciple(this.id.substring(2))' class='input-group-addon btn btn-primary boutons-perso'>Supprimer</span>";
+            affiche += ligne;
+        }
+    }catch (err){window.console.log("fetchCoDisciplesCallBack -err = "+err);}
+    affiche+="</div>";
+
+    $('#page').html(affiche);
+
+}
+
+/**
+ * Prépare la requete ajax pour supprimer une approbation en DB
+ * @param id
+ */
+function deleteCodisciple(id)
+{
+    $.ajax({
+        type :'GET',
+        url : 'bl/deleteCodisciple.php',
+        data : 'id='+id,
+        success : deleteCodiscipleCallback
+    })
+}
+
+/**
+ * affiche la liste des coDsciples après la suppression en DB
+ */
+function deleteCodiscipleCallback()
+{
+    fetchCodisciples(0);
 }
 
 /**
@@ -379,15 +454,22 @@ function writeTweet()
  */
 function writeTweetCallback(ret)
 {
+
     if(ret)
         fetchTweets(g_wall);
     else
         alert("Votre tweet n'a pas pu être inséré");
 }
 
-
+/**
+ * Supprimer le tweet dont l'id est donné en parametre
+ * @param $tweet_id (int) : id du tweet à supprimer
+ * @return le nombre d'enregistrement modifié en DB
+ */
 function deleteTweet(id)
 {
+    window.console.log("deleteTweet() -start");
+
     $.ajax({
         type : 'GET',
         url : 'bl/deleteTweet.php',
@@ -396,10 +478,92 @@ function deleteTweet(id)
     })
 }
 
+/**
+ * Affiche la liste des tweets après suppresion
+ * @param ret indication réussite/echec de suppression en DB
+ */
 function deleteTweetCallback(ret)
 {
-    displayTweetDelete()
+    window.console.log("deleteTweetCallback() -start");
+    fetchTweets(0);
 }
+
+/**
+ * Affiche un champ permettant de lancer la recherche d'un utilisateur qui n'est pas encore Codisciple
+ */
+function displayAddCodisciple()
+{
+    window.console.log("displayAddCodisciple() -start");
+    if(g_isConnected)
+    {
+        // il faut remplacer la div des coDisciples par un
+        var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >List des co' disciples </button>";
+
+        affiche+="<br/><div class='form-group'> <label for='usr'>Nom du coDisciple :</label> <input type='text' class='form-control' id='searchCodisciple'> </div>";
+        affiche+="<button onclick='fetchRequestedCodisciples()' type='submit' class='btn btn-primary btn-md custom-btn boutons-perso'>Rechercher</button>"
+        affiche+="</div>";
+
+        $('#page').html(affiche);
+
+
+    }else
+    {
+        return ;
+    }
+}
+
+/**
+ * Prépare une requete ajax permettant de récupérer une liste d'utilisateur à partir d'un nom entré par l'user courant
+ */
+function fetchRequestedCodisciples()
+{
+    window.console.log("fetchRequestedCodisciples() -start");
+    var name = $('#searchCodisciple').val();
+
+    $.ajax({
+        type : 'GET',
+        url : 'bl/fetchRequestedCodisciples.php',
+        data :'name='+name,
+        success : fetchRequestedCodisciplesCallback
+    })
+}
+
+/**
+ * Affiche la liste des utilisateurs correspondant au nom entré et affiche un bouton pour lancer une invitation
+ * @param ret : liste des user correspondant au nom entré
+ */
+function fetchRequestedCodisciplesCallback(codisciples)
+{
+    window.console.log("fetchRequestedCodisciplesCallback() - start");
+    try{
+        var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Résultat </button>";
+        var jarray = $.parseJSON(codisciples);
+        for (var i = 0 ; i <jarray.length ; i++)
+        {
+            var row= jarray[i];
+            var id = row['id'];
+            var username = row['username'];
+            var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
+                "'"+" >";
+            ligne+= username+"</button>";
+            ligne+="<span id='dl"+id+"' onclick='AddCodisciple((this.id.substring(2))' class='input-group-addon btn btn-primary boutons-perso'>Ajouter</span>";
+            affiche += ligne;
+        }
+    }catch (err){window.console.log("fetchRequestedCodisciplesCallback -err = "+err);}
+    affiche+="</div>";
+
+    $('#page').html(affiche);
+}
+
+/**
+ * Prépare la requete ajax pour ajouter une invitation de la  part du user courant pour guest_id
+ * @param $guest_id : id du user invité
+ */
+function AddCodisciple(guest_id)
+{
+
+}
+
 
 /**
  * Recupère les pubs par une requête Ajax vers le server

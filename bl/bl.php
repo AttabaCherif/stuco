@@ -72,9 +72,32 @@ function writeTweet($writer_id,$wall_owner_id,$tweet_content)
     return $ret;
 }
 
+/**
+ * Supprimer le tweet dont l'id est donné en parametre
+ * @param $tweet_id (int) : id du tweet à supprimer
+ * @return le nombre d'enregistrement modifié en DB
+ */
 function deleteTweet($tweet_id)
 {
     $ret=dbDeleteTweet($tweet_id);
     return $ret;
 }
 
+/**
+ * Supprimer un lien d'amitié
+ * @param $user_id : utilisateur qui demande la suppression d'amitié
+ * @param $coDisciple_id : utilisateur concerné par la suppression
+ * @return (int) le nombre de ligne modifiée en DB
+ */
+function deleteCodisciple($user_id, $coDisciple_id)
+{
+    $ret=dbDeleteCodisciple($user_id, $coDisciple_id);
+    return $ret;
+}
+
+
+function fetchRequestedCodisciples($name,$user_id)
+{
+    $ret = dbfetchRequestedCodisciples($name,$user_id);
+    return $ret;
+}
