@@ -2,8 +2,8 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="159" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="536" mnemonic="1" />
     <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="417" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/js/stuco.js" line="601" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edaa7db6-38bd-45be-97ee-fcabb11a3239" name="Default" comment="" />
@@ -17,34 +17,132 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="stuco.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="stuco.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/stuco.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="545" column="83" lean-forward="true" selection-start-line="545" selection-start-column="83" selection-end-line="545" selection-end-column="83" />
+            <state relative-caret-position="241">
+              <caret line="611" column="13" lean-forward="true" selection-start-line="611" selection-start-column="13" selection-end-line="611" selection-end-column="13" />
               <folding>
+                <element signature="e#0#21#0" expanded="false" />
+                <element signature="n#!!doc;n#initApp#0" expanded="false" />
+                <element signature="n#!!block;n#initApp#0" expanded="false" />
+                <element signature="n#!!doc;n#doConnect#0" expanded="false" />
+                <element signature="n#!!block;n#doConnect#0" expanded="false" />
+                <element signature="e#833#862#0" expanded="false" />
+                <element signature="e#868#937#0" expanded="false" />
+                <element signature="n#!!doc;n#disconnect#0" expanded="false" />
+                <element signature="n#!!block;n#disconnect#0" expanded="false" />
+                <element signature="e#1045#1140#0" expanded="false" />
+                <element signature="n#!!doc;n#disconnectCallback#0" expanded="false" />
+                <element signature="n#!!block;n#disconnectCallback#0" expanded="false" />
+                <element signature="e#1347#1504#0" expanded="false" />
+                <element signature="n#!!doc;n#authenticate#0" expanded="false" />
+                <element signature="n#!!block;n#authenticate#0" expanded="false" />
+                <element signature="e#2045#2236#0" expanded="false" />
+                <element signature="n#!!doc;n#authenticateCallback#0" expanded="false" />
+                <element signature="n#!!block;n#authenticateCallback#0" expanded="false" />
+                <element signature="n#!!doc;n#connect#0" expanded="false" />
+                <element signature="n#!!block;n#connect#0" expanded="false" />
+                <element signature="n#!!doc;n#fetchCodisciples#0" expanded="false" />
+                <element signature="n#!!block;n#fetchCodisciples#0" expanded="false" />
+                <element signature="e#3156#3399#0" expanded="false" />
+                <element signature="e#3263#3391#0" expanded="false" />
+                <element signature="e#3413#3436#0" expanded="false" />
+                <element signature="n#!!doc;n#fetchCodisciplesCallback#0" expanded="false" />
+                <element signature="n#!!block;n#fetchCodisciplesCallback#0" expanded="false" />
+                <element signature="e#3651#4361#0" expanded="false" />
+                <element signature="e#3926#4355#0" expanded="false" />
+                <element signature="n#!!doc;n#fetchTweets#0" expanded="false" />
+                <element signature="n#!!block;n#fetchTweets#0" expanded="false" />
+                <element signature="e#4720#4997#0" expanded="false" />
+                <element signature="e#4840#4987#0" expanded="false" />
+                <element signature="e#5006#5029#0" expanded="false" />
+                <element signature="n#!!doc;n#fetchTweetsCallback#0" expanded="false" />
+                <element signature="n#!!block;n#fetchTweetsCallback#0" expanded="false" />
+                <element signature="e#5386#5499#0" expanded="false" />
+                <element signature="e#5513#6211#0" expanded="false" />
+                <element signature="e#5535#6093#0" expanded="false" />
+                <element signature="e#5649#6052#0" expanded="false" />
+                <element signature="e#6122#6205#0" expanded="false" />
+                <element signature="n#!!doc;n#wallTitle#0" expanded="false" />
+                <element signature="n#!!block;n#wallTitle#0" expanded="false" />
+                <element signature="e#6410#6537#0" expanded="false" />
+                <element signature="n#!!doc;n#wallTitleCallback#0" expanded="false" />
+                <element signature="n#!!block;n#wallTitleCallback#0" expanded="false" />
+                <element signature="n#!!doc;n#displayTweetDelete#0" expanded="false" />
+                <element signature="n#!!block;n#displayTweetDelete#0" expanded="false" />
+                <element signature="e#6870#7130#0" expanded="false" />
+                <element signature="e#6968#7121#0" expanded="false" />
+                <element signature="e#7139#7163#0" expanded="false" />
+                <element signature="n#!!doc;n#displayTweetDeleteCallback#0" expanded="false" />
+                <element signature="n#!!block;n#displayTweetDeleteCallback#0" expanded="false" />
+                <element signature="e#7527#7640#0" expanded="false" />
+                <element signature="e#7654#8512#0" expanded="false" />
+                <element signature="e#7676#8394#0" expanded="false" />
+                <element signature="e#7790#8353#0" expanded="false" />
+                <element signature="e#8423#8506#0" expanded="false" />
+                <element signature="n#!!doc;n#displayCodisciplesDelete#0" expanded="false" />
+                <element signature="n#!!block;n#displayCodisciplesDelete#0" expanded="false" />
+                <element signature="e#8863#9144#0" expanded="false" />
+                <element signature="e#8971#9135#0" expanded="false" />
+                <element signature="e#9153#9177#0" expanded="false" />
+                <element signature="n#!!doc;n#displayCodisciplesDeleteCallback#0" expanded="false" />
+                <element signature="n#!!doc;n#deleteCodisciple#0" expanded="false" />
+                <element signature="n#!!block;n#deleteCodisciple#0" expanded="false" />
+                <element signature="e#10462#10599#0" expanded="false" />
+                <element signature="n#!!doc;n#deleteCodiscipleCallback#0" expanded="false" />
+                <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
+                <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
+                <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
+                <element signature="e#10916#11558#0" expanded="false" />
+                <element signature="e#11567#11591#0" expanded="false" />
+                <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
+                <element signature="n#!!block;n#writeTweet#0" expanded="false" />
+                <element signature="e#11864#12038#0" expanded="false" />
+                <element signature="n#!!doc;n#writeTweetCallback#0" expanded="false" />
+                <element signature="n#!!block;n#writeTweetCallback#0" expanded="false" />
+                <element signature="n#!!doc;n#deleteTweet#0" expanded="false" />
+                <element signature="n#!!block;n#deleteTweet#0" expanded="false" />
+                <element signature="e#12664#12792#0" expanded="false" />
+                <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
+                <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
+                <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
                 <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
-                <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
+                <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
+                <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
+                <element signature="e#14234#14393#0" expanded="false" />
+                <element signature="n#!!doc;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+                <element signature="n#!!block;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+                <element signature="e#14712#15458#0" expanded="false" />
+                <element signature="e#14981#15452#0" expanded="false" />
+                <element signature="n#!!doc;n#sendInvitation#0" expanded="false" />
+                <element signature="n#!!block;n#sendInvitation#0" expanded="false" />
+                <element signature="e#15749#15889#0" expanded="false" />
+                <element signature="n#!!doc;n#sendInvitationCallback#0" expanded="false" />
+                <element signature="n#!!block;n#sendInvitationCallback#0" expanded="false" />
+                <element signature="e#16077#16123#0" expanded="false" />
+                <element signature="e#16132#16177#0" expanded="false" />
+                <element signature="n#!!doc;n#pubs#0" expanded="false" />
+                <element signature="n#!!block;n#pubs#0" expanded="false" />
+                <element signature="e#17836#17928#0" expanded="false" />
+                <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
+                <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
+                <element signature="e#18284#18372#0" expanded="false" />
+                <element signature="n#!!doc;n#overElement#0" expanded="false" />
+                <element signature="n#!!block;n#overElement#0" expanded="false" />
+                <element signature="n#!!doc;n#outElement#0" expanded="false" />
+                <element signature="n#!!block;n#outElement#0" expanded="false" />
+                <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fetchRequestedCodisciples.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bl/fetchRequestedCodisciples.php">
+      <file leaf-file-name="fetchApprobations.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bl/fetchApprobations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fetchCodisciples.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bl/fetchCodisciples.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,48 +152,59 @@
         <entry file="file://$PROJECT_DIR$/bl/bl.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
-              <caret line="100" column="18" lean-forward="false" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+              <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dal.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dal/dal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="593">
+              <caret line="192" column="47" lean-forward="true" selection-start-line="192" selection-start-column="47" selection-end-line="192" selection-end-column="47" />
               <folding>
-                <element signature="e#1759#1915#0#PHP" expanded="false" />
+                <element signature="e#35#185#0#PHP" expanded="false" />
+                <element signature="n#dbReadLogin#0;n#!!top" expanded="false" />
+                <element signature="e#335#630#0#PHP" expanded="false" />
+                <element signature="e#579#630#0#PHP" expanded="false" />
+                <element signature="e#634#765#0#PHP" expanded="false" />
+                <element signature="n#dbFetchUsername#0;n#!!top" expanded="false" />
+                <element signature="e#1208#1364#0#PHP" expanded="false" />
+                <element signature="n#dbListOfCodisciples#0;n#!!top" expanded="false" />
+                <element signature="e#1591#1756#0#PHP" expanded="false" />
+                <element signature="e#1760#1916#0#PHP" expanded="false" />
                 <element signature="n#dbListOfTweets#0;n#!!top" expanded="false" />
-                <element signature="e#2305#2595#0#PHP" expanded="false" />
+                <element signature="e#2306#2596#0#PHP" expanded="false" />
                 <element signature="n#dbWriteTweet#0;n#!!top" expanded="false" />
-                <element signature="e#2954#3126#0#PHP" expanded="false" />
+                <element signature="e#2793#2951#0#PHP" expanded="false" />
+                <element signature="e#2955#3127#0#PHP" expanded="false" />
                 <element signature="n#dbDeleteTweet#0;n#!!top" expanded="false" />
+                <element signature="e#3219#3377#0#PHP" expanded="false" />
+                <element signature="e#3381#3561#0#PHP" expanded="false" />
                 <element signature="n#dbDeleteCodisciple#0;n#!!top" expanded="false" />
-                <marker date="1521815901736" expanded="true" signature="251:323" ph="SELECT id FR... login" />
-                <marker date="1521815901736" expanded="true" signature="820:863" ph="SELECT usern... login" />
-                <marker date="1521815901736" expanded="true" signature="1410:1582" ph="SELECT l.id,... login" />
-                <marker date="1521815901736" expanded="true" signature="4118:4126" ph="SELECT l.id,... login" />
-                <marker date="1521815901736" expanded="true" signature="4118:4329" ph="SELECT login... login" />
-                <marker date="1521815901736" expanded="true" signature="4118:4333" ph="SELECT login... login" />
-                <marker date="1521815901736" expanded="true" signature="4118:4358" ph="SELECT login... login" />
-                <marker date="1521815901736" expanded="true" signature="4118:4399" ph="SELECT login... login" />
-                <marker date="1521815901736" expanded="true" signature="4184:4328" ph="SELECT l.id login" />
+                <element signature="e#3795#3953#0#PHP" expanded="false" />
+                <element signature="e#3957#4232#0#PHP" expanded="false" />
+                <element signature="n#dbfetchRequestedCodisciples#0;n#!!top" expanded="false" />
+                <element signature="e#4547#4718#0#PHP" expanded="false" />
+                <element signature="e#4723#4908#0#PHP" expanded="false" />
+                <element signature="n#dbSendInvitation#0;n#!!top" expanded="false" />
+                <element signature="e#5088#5246#0#PHP" expanded="false" />
+                <marker date="1521897239671" expanded="true" signature="5296:5398" ph="SELECT appro... " />
+                <marker date="1521897239671" expanded="true" signature="5296:5417" ph="SELECT appro... approval" />
+                <marker date="1521897239671" expanded="true" signature="5296:5423" ph="SELECT appro... approval" />
+                <marker date="1521897239671" expanded="true" signature="5296:5450" ph="SELECT appro... approval" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="119">
-                <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="61" column="94" lean-forward="false" selection-start-line="61" selection-start-column="76" selection-end-line="61" selection-end-column="94" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,7 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Mur d</find>
       <find>Mur</find>
       <find>username</find>
       <find>respon</find>
@@ -134,6 +242,7 @@
       <find>texta</find>
       <find>display</find>
       <find>displayTwe</find>
+      <find>fetchrequ</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -158,12 +267,15 @@
         <option value="$PROJECT_DIR$/bl/writeTweet.php" />
         <option value="$PROJECT_DIR$/bl/deleteTweet.php" />
         <option value="$PROJECT_DIR$/bl/deleteCodisciple.php" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bl/fetchRequestedCodisciples.php" />
-        <option value="$PROJECT_DIR$/bl/bl.php" />
-        <option value="$PROJECT_DIR$/js/stuco.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/bl/sendInvitation.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/bl/fetchApprobation.php" />
+        <option value="$PROJECT_DIR$/bl/bl.php" />
         <option value="$PROJECT_DIR$/dal/dal.php" />
+        <option value="$PROJECT_DIR$/bl/fetchApprobations.php" />
+        <option value="$PROJECT_DIR$/js/stuco.js" />
       </list>
     </option>
   </component>
@@ -177,11 +289,9 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2" />
-    <option name="y" value="1" />
-    <option name="width" value="1022" />
-    <option name="height" value="722" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1366" />
+    <option name="height" value="856" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -505,15 +615,15 @@
       <workItem from="1521129621220" duration="18804000" />
       <workItem from="1521565568120" duration="9098000" />
       <workItem from="1521740640158" duration="60000" />
-      <workItem from="1521741139018" duration="19676000" />
+      <workItem from="1521741139018" duration="27738000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110947000" />
+    <option name="totallyTimeSpent" value="119009000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="872" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="856" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -529,7 +639,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18888889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -587,39 +697,126 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bl/bl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/dal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/stuco.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#0#21#0" expanded="false" />
+            <element signature="n#!!doc;n#initApp#0" expanded="false" />
+            <element signature="n#!!block;n#initApp#0" expanded="false" />
+            <element signature="n#!!doc;n#doConnect#0" expanded="false" />
+            <element signature="n#!!block;n#doConnect#0" expanded="false" />
+            <element signature="e#833#862#0" expanded="false" />
+            <element signature="e#868#937#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnect#0" expanded="false" />
+            <element signature="n#!!block;n#disconnect#0" expanded="false" />
+            <element signature="e#1045#1140#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnectCallback#0" expanded="false" />
+            <element signature="n#!!block;n#disconnectCallback#0" expanded="false" />
+            <element signature="e#1347#1504#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticate#0" expanded="false" />
+            <element signature="n#!!block;n#authenticate#0" expanded="false" />
+            <element signature="e#2045#2236#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!block;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#connect#0" expanded="false" />
+            <element signature="n#!!block;n#connect#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciples#0" expanded="false" />
+            <element signature="e#3156#3399#0" expanded="false" />
+            <element signature="e#3263#3391#0" expanded="false" />
+            <element signature="e#3413#3436#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="e#3651#4361#0" expanded="false" />
+            <element signature="e#3926#4355#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweets#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweets#0" expanded="false" />
+            <element signature="e#4720#4997#0" expanded="false" />
+            <element signature="e#4840#4987#0" expanded="false" />
+            <element signature="e#5006#5029#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="e#5386#5499#0" expanded="false" />
+            <element signature="e#5513#6211#0" expanded="false" />
+            <element signature="e#5535#6093#0" expanded="false" />
+            <element signature="e#5649#6052#0" expanded="false" />
+            <element signature="e#6122#6205#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitle#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitle#0" expanded="false" />
+            <element signature="e#6410#6537#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDelete#0" expanded="false" />
+            <element signature="e#6870#7130#0" expanded="false" />
+            <element signature="e#6968#7121#0" expanded="false" />
+            <element signature="e#7139#7163#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="e#7527#7640#0" expanded="false" />
+            <element signature="e#7654#8512#0" expanded="false" />
+            <element signature="e#7676#8394#0" expanded="false" />
+            <element signature="e#7790#8353#0" expanded="false" />
+            <element signature="e#8423#8506#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="e#8863#9144#0" expanded="false" />
+            <element signature="e#8971#9135#0" expanded="false" />
+            <element signature="e#9153#9177#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDeleteCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodisciple#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodisciple#0" expanded="false" />
+            <element signature="e#10462#10599#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="e#10916#11558#0" expanded="false" />
+            <element signature="e#11567#11591#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweet#0" expanded="false" />
+            <element signature="e#11864#12038#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweet#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweet#0" expanded="false" />
+            <element signature="e#12664#12792#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
-            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
+            <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="e#14234#14393#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="e#14712#15458#0" expanded="false" />
+            <element signature="e#14981#15452#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitation#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitation#0" expanded="false" />
+            <element signature="e#15749#15889#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="e#16077#16123#0" expanded="false" />
+            <element signature="e#16132#16177#0" expanded="false" />
+            <element signature="n#!!doc;n#pubs#0" expanded="false" />
+            <element signature="n#!!block;n#pubs#0" expanded="false" />
+            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
+            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="n#!!doc;n#overElement#0" expanded="false" />
+            <element signature="n#!!block;n#overElement#0" expanded="false" />
+            <element signature="n#!!doc;n#outElement#0" expanded="false" />
+            <element signature="n#!!block;n#outElement#0" expanded="false" />
+            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -672,8 +869,116 @@
         <state relative-caret-position="255">
           <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
+            <element signature="e#0#21#0" expanded="false" />
+            <element signature="n#!!doc;n#initApp#0" expanded="false" />
+            <element signature="n#!!block;n#initApp#0" expanded="false" />
+            <element signature="n#!!doc;n#doConnect#0" expanded="false" />
+            <element signature="n#!!block;n#doConnect#0" expanded="false" />
+            <element signature="e#833#862#0" expanded="false" />
+            <element signature="e#868#937#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnect#0" expanded="false" />
+            <element signature="n#!!block;n#disconnect#0" expanded="false" />
+            <element signature="e#1045#1140#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnectCallback#0" expanded="false" />
+            <element signature="n#!!block;n#disconnectCallback#0" expanded="false" />
+            <element signature="e#1347#1504#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticate#0" expanded="false" />
+            <element signature="n#!!block;n#authenticate#0" expanded="false" />
+            <element signature="e#2045#2236#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!block;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#connect#0" expanded="false" />
+            <element signature="n#!!block;n#connect#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciples#0" expanded="false" />
+            <element signature="e#3156#3399#0" expanded="false" />
+            <element signature="e#3263#3391#0" expanded="false" />
+            <element signature="e#3413#3436#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="e#3651#4361#0" expanded="false" />
+            <element signature="e#3926#4355#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweets#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweets#0" expanded="false" />
+            <element signature="e#4720#4997#0" expanded="false" />
+            <element signature="e#4840#4987#0" expanded="false" />
+            <element signature="e#5006#5029#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="e#5386#5499#0" expanded="false" />
+            <element signature="e#5513#6211#0" expanded="false" />
+            <element signature="e#5535#6093#0" expanded="false" />
+            <element signature="e#5649#6052#0" expanded="false" />
+            <element signature="e#6122#6205#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitle#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitle#0" expanded="false" />
+            <element signature="e#6410#6537#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDelete#0" expanded="false" />
+            <element signature="e#6870#7130#0" expanded="false" />
+            <element signature="e#6968#7121#0" expanded="false" />
+            <element signature="e#7139#7163#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="e#7527#7640#0" expanded="false" />
+            <element signature="e#7654#8512#0" expanded="false" />
+            <element signature="e#7676#8394#0" expanded="false" />
+            <element signature="e#7790#8353#0" expanded="false" />
+            <element signature="e#8423#8506#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="e#8863#9144#0" expanded="false" />
+            <element signature="e#8971#9135#0" expanded="false" />
+            <element signature="e#9153#9177#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDeleteCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodisciple#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodisciple#0" expanded="false" />
+            <element signature="e#10462#10599#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="e#10916#11558#0" expanded="false" />
+            <element signature="e#11567#11591#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweet#0" expanded="false" />
+            <element signature="e#11864#12038#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweet#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweet#0" expanded="false" />
+            <element signature="e#12664#12792#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
-            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
+            <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="e#14234#14393#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="e#14712#15458#0" expanded="false" />
+            <element signature="e#14981#15452#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitation#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitation#0" expanded="false" />
+            <element signature="e#15749#15889#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="e#16077#16123#0" expanded="false" />
+            <element signature="e#16132#16177#0" expanded="false" />
+            <element signature="n#!!doc;n#pubs#0" expanded="false" />
+            <element signature="n#!!block;n#pubs#0" expanded="false" />
+            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
+            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="n#!!doc;n#overElement#0" expanded="false" />
+            <element signature="n#!!block;n#overElement#0" expanded="false" />
+            <element signature="n#!!doc;n#outElement#0" expanded="false" />
+            <element signature="n#!!block;n#outElement#0" expanded="false" />
+            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -740,8 +1045,116 @@
         <state relative-caret-position="1105">
           <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
           <folding>
+            <element signature="e#0#21#0" expanded="false" />
+            <element signature="n#!!doc;n#initApp#0" expanded="false" />
+            <element signature="n#!!block;n#initApp#0" expanded="false" />
+            <element signature="n#!!doc;n#doConnect#0" expanded="false" />
+            <element signature="n#!!block;n#doConnect#0" expanded="false" />
+            <element signature="e#833#862#0" expanded="false" />
+            <element signature="e#868#937#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnect#0" expanded="false" />
+            <element signature="n#!!block;n#disconnect#0" expanded="false" />
+            <element signature="e#1045#1140#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnectCallback#0" expanded="false" />
+            <element signature="n#!!block;n#disconnectCallback#0" expanded="false" />
+            <element signature="e#1347#1504#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticate#0" expanded="false" />
+            <element signature="n#!!block;n#authenticate#0" expanded="false" />
+            <element signature="e#2045#2236#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!block;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#connect#0" expanded="false" />
+            <element signature="n#!!block;n#connect#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciples#0" expanded="false" />
+            <element signature="e#3156#3399#0" expanded="false" />
+            <element signature="e#3263#3391#0" expanded="false" />
+            <element signature="e#3413#3436#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="e#3651#4361#0" expanded="false" />
+            <element signature="e#3926#4355#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweets#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweets#0" expanded="false" />
+            <element signature="e#4720#4997#0" expanded="false" />
+            <element signature="e#4840#4987#0" expanded="false" />
+            <element signature="e#5006#5029#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="e#5386#5499#0" expanded="false" />
+            <element signature="e#5513#6211#0" expanded="false" />
+            <element signature="e#5535#6093#0" expanded="false" />
+            <element signature="e#5649#6052#0" expanded="false" />
+            <element signature="e#6122#6205#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitle#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitle#0" expanded="false" />
+            <element signature="e#6410#6537#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDelete#0" expanded="false" />
+            <element signature="e#6870#7130#0" expanded="false" />
+            <element signature="e#6968#7121#0" expanded="false" />
+            <element signature="e#7139#7163#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="e#7527#7640#0" expanded="false" />
+            <element signature="e#7654#8512#0" expanded="false" />
+            <element signature="e#7676#8394#0" expanded="false" />
+            <element signature="e#7790#8353#0" expanded="false" />
+            <element signature="e#8423#8506#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="e#8863#9144#0" expanded="false" />
+            <element signature="e#8971#9135#0" expanded="false" />
+            <element signature="e#9153#9177#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDeleteCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodisciple#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodisciple#0" expanded="false" />
+            <element signature="e#10462#10599#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="e#10916#11558#0" expanded="false" />
+            <element signature="e#11567#11591#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweet#0" expanded="false" />
+            <element signature="e#11864#12038#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweet#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweet#0" expanded="false" />
+            <element signature="e#12664#12792#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
-            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
+            <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="e#14234#14393#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="e#14712#15458#0" expanded="false" />
+            <element signature="e#14981#15452#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitation#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitation#0" expanded="false" />
+            <element signature="e#15749#15889#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="e#16077#16123#0" expanded="false" />
+            <element signature="e#16132#16177#0" expanded="false" />
+            <element signature="n#!!doc;n#pubs#0" expanded="false" />
+            <element signature="n#!!block;n#pubs#0" expanded="false" />
+            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
+            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="n#!!doc;n#overElement#0" expanded="false" />
+            <element signature="n#!!block;n#overElement#0" expanded="false" />
+            <element signature="n#!!doc;n#outElement#0" expanded="false" />
+            <element signature="n#!!block;n#outElement#0" expanded="false" />
+            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -765,8 +1178,116 @@
         <state relative-caret-position="2431">
           <caret line="143" column="23" lean-forward="true" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="34" />
           <folding>
+            <element signature="e#0#21#0" expanded="false" />
+            <element signature="n#!!doc;n#initApp#0" expanded="false" />
+            <element signature="n#!!block;n#initApp#0" expanded="false" />
+            <element signature="n#!!doc;n#doConnect#0" expanded="false" />
+            <element signature="n#!!block;n#doConnect#0" expanded="false" />
+            <element signature="e#833#862#0" expanded="false" />
+            <element signature="e#868#937#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnect#0" expanded="false" />
+            <element signature="n#!!block;n#disconnect#0" expanded="false" />
+            <element signature="e#1045#1140#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnectCallback#0" expanded="false" />
+            <element signature="n#!!block;n#disconnectCallback#0" expanded="false" />
+            <element signature="e#1347#1504#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticate#0" expanded="false" />
+            <element signature="n#!!block;n#authenticate#0" expanded="false" />
+            <element signature="e#2045#2236#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!block;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#connect#0" expanded="false" />
+            <element signature="n#!!block;n#connect#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciples#0" expanded="false" />
+            <element signature="e#3156#3399#0" expanded="false" />
+            <element signature="e#3263#3391#0" expanded="false" />
+            <element signature="e#3413#3436#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="e#3651#4361#0" expanded="false" />
+            <element signature="e#3926#4355#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweets#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweets#0" expanded="false" />
+            <element signature="e#4720#4997#0" expanded="false" />
+            <element signature="e#4840#4987#0" expanded="false" />
+            <element signature="e#5006#5029#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="e#5386#5499#0" expanded="false" />
+            <element signature="e#5513#6211#0" expanded="false" />
+            <element signature="e#5535#6093#0" expanded="false" />
+            <element signature="e#5649#6052#0" expanded="false" />
+            <element signature="e#6122#6205#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitle#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitle#0" expanded="false" />
+            <element signature="e#6410#6537#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDelete#0" expanded="false" />
+            <element signature="e#6870#7130#0" expanded="false" />
+            <element signature="e#6968#7121#0" expanded="false" />
+            <element signature="e#7139#7163#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="e#7527#7640#0" expanded="false" />
+            <element signature="e#7654#8512#0" expanded="false" />
+            <element signature="e#7676#8394#0" expanded="false" />
+            <element signature="e#7790#8353#0" expanded="false" />
+            <element signature="e#8423#8506#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="e#8863#9144#0" expanded="false" />
+            <element signature="e#8971#9135#0" expanded="false" />
+            <element signature="e#9153#9177#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDeleteCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodisciple#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodisciple#0" expanded="false" />
+            <element signature="e#10462#10599#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="e#10916#11558#0" expanded="false" />
+            <element signature="e#11567#11591#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweet#0" expanded="false" />
+            <element signature="e#11864#12038#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweet#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweet#0" expanded="false" />
+            <element signature="e#12664#12792#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
-            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
+            <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="e#14234#14393#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="e#14712#15458#0" expanded="false" />
+            <element signature="e#14981#15452#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitation#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitation#0" expanded="false" />
+            <element signature="e#15749#15889#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="e#16077#16123#0" expanded="false" />
+            <element signature="e#16132#16177#0" expanded="false" />
+            <element signature="n#!!doc;n#pubs#0" expanded="false" />
+            <element signature="n#!!block;n#pubs#0" expanded="false" />
+            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
+            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="n#!!doc;n#overElement#0" expanded="false" />
+            <element signature="n#!!block;n#overElement#0" expanded="false" />
+            <element signature="n#!!doc;n#outElement#0" expanded="false" />
+            <element signature="n#!!block;n#outElement#0" expanded="false" />
+            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -875,26 +1396,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bl/writeTweet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bl/deleteTweet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="60" column="66" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -923,17 +1428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/stuco.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="545" column="83" lean-forward="true" selection-start-line="545" selection-start-column="83" selection-end-line="545" selection-end-column="83" />
-          <folding>
-            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
-            <marker date="1521810475390" expanded="true" signature="11297:11308" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -945,10 +1439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bl/fetchCodisciples.php">
+    <entry file="file://$PROJECT_DIR$/bl/writeTweet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="357">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -961,35 +1455,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bl/bl.php">
+    <entry file="file://$PROJECT_DIR$/bl/sendInvitation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="100" column="18" lean-forward="false" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="61" column="94" lean-forward="false" selection-start-line="61" selection-start-column="76" selection-end-line="61" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchApprobation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchCodisciples.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="19" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dal/dal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="593">
+          <caret line="192" column="47" lean-forward="true" selection-start-line="192" selection-start-column="47" selection-end-line="192" selection-end-column="47" />
           <folding>
-            <element signature="e#1759#1915#0#PHP" expanded="false" />
+            <element signature="e#35#185#0#PHP" expanded="false" />
+            <element signature="n#dbReadLogin#0;n#!!top" expanded="false" />
+            <element signature="e#335#630#0#PHP" expanded="false" />
+            <element signature="e#579#630#0#PHP" expanded="false" />
+            <element signature="e#634#765#0#PHP" expanded="false" />
+            <element signature="n#dbFetchUsername#0;n#!!top" expanded="false" />
+            <element signature="e#1208#1364#0#PHP" expanded="false" />
+            <element signature="n#dbListOfCodisciples#0;n#!!top" expanded="false" />
+            <element signature="e#1591#1756#0#PHP" expanded="false" />
+            <element signature="e#1760#1916#0#PHP" expanded="false" />
             <element signature="n#dbListOfTweets#0;n#!!top" expanded="false" />
-            <element signature="e#2305#2595#0#PHP" expanded="false" />
+            <element signature="e#2306#2596#0#PHP" expanded="false" />
             <element signature="n#dbWriteTweet#0;n#!!top" expanded="false" />
-            <element signature="e#2954#3126#0#PHP" expanded="false" />
+            <element signature="e#2793#2951#0#PHP" expanded="false" />
+            <element signature="e#2955#3127#0#PHP" expanded="false" />
             <element signature="n#dbDeleteTweet#0;n#!!top" expanded="false" />
+            <element signature="e#3219#3377#0#PHP" expanded="false" />
+            <element signature="e#3381#3561#0#PHP" expanded="false" />
             <element signature="n#dbDeleteCodisciple#0;n#!!top" expanded="false" />
-            <marker date="1521815901736" expanded="true" signature="251:323" ph="SELECT id FR... login" />
-            <marker date="1521815901736" expanded="true" signature="820:863" ph="SELECT usern... login" />
-            <marker date="1521815901736" expanded="true" signature="1410:1582" ph="SELECT l.id,... login" />
-            <marker date="1521815901736" expanded="true" signature="4118:4126" ph="SELECT l.id,... login" />
-            <marker date="1521815901736" expanded="true" signature="4118:4329" ph="SELECT login... login" />
-            <marker date="1521815901736" expanded="true" signature="4118:4333" ph="SELECT login... login" />
-            <marker date="1521815901736" expanded="true" signature="4118:4358" ph="SELECT login... login" />
-            <marker date="1521815901736" expanded="true" signature="4118:4399" ph="SELECT login... login" />
-            <marker date="1521815901736" expanded="true" signature="4184:4328" ph="SELECT l.id login" />
+            <element signature="e#3795#3953#0#PHP" expanded="false" />
+            <element signature="e#3957#4232#0#PHP" expanded="false" />
+            <element signature="n#dbfetchRequestedCodisciples#0;n#!!top" expanded="false" />
+            <element signature="e#4547#4718#0#PHP" expanded="false" />
+            <element signature="e#4723#4908#0#PHP" expanded="false" />
+            <element signature="n#dbSendInvitation#0;n#!!top" expanded="false" />
+            <element signature="e#5088#5246#0#PHP" expanded="false" />
+            <marker date="1521897239671" expanded="true" signature="5296:5398" ph="SELECT appro... " />
+            <marker date="1521897239671" expanded="true" signature="5296:5417" ph="SELECT appro... approval" />
+            <marker date="1521897239671" expanded="true" signature="5296:5423" ph="SELECT appro... approval" />
+            <marker date="1521897239671" expanded="true" signature="5296:5450" ph="SELECT appro... approval" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/bl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchApprobations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stuco.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="611" column="13" lean-forward="true" selection-start-line="611" selection-start-column="13" selection-end-line="611" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#21#0" expanded="false" />
+            <element signature="n#!!doc;n#initApp#0" expanded="false" />
+            <element signature="n#!!block;n#initApp#0" expanded="false" />
+            <element signature="n#!!doc;n#doConnect#0" expanded="false" />
+            <element signature="n#!!block;n#doConnect#0" expanded="false" />
+            <element signature="e#833#862#0" expanded="false" />
+            <element signature="e#868#937#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnect#0" expanded="false" />
+            <element signature="n#!!block;n#disconnect#0" expanded="false" />
+            <element signature="e#1045#1140#0" expanded="false" />
+            <element signature="n#!!doc;n#disconnectCallback#0" expanded="false" />
+            <element signature="n#!!block;n#disconnectCallback#0" expanded="false" />
+            <element signature="e#1347#1504#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticate#0" expanded="false" />
+            <element signature="n#!!block;n#authenticate#0" expanded="false" />
+            <element signature="e#2045#2236#0" expanded="false" />
+            <element signature="n#!!doc;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!block;n#authenticateCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#connect#0" expanded="false" />
+            <element signature="n#!!block;n#connect#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciples#0" expanded="false" />
+            <element signature="e#3156#3399#0" expanded="false" />
+            <element signature="e#3263#3391#0" expanded="false" />
+            <element signature="e#3413#3436#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchCodisciplesCallback#0" expanded="false" />
+            <element signature="e#3651#4361#0" expanded="false" />
+            <element signature="e#3926#4355#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweets#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweets#0" expanded="false" />
+            <element signature="e#4720#4997#0" expanded="false" />
+            <element signature="e#4840#4987#0" expanded="false" />
+            <element signature="e#5006#5029#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchTweetsCallback#0" expanded="false" />
+            <element signature="e#5386#5499#0" expanded="false" />
+            <element signature="e#5513#6211#0" expanded="false" />
+            <element signature="e#5535#6093#0" expanded="false" />
+            <element signature="e#5649#6052#0" expanded="false" />
+            <element signature="e#6122#6205#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitle#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitle#0" expanded="false" />
+            <element signature="e#6410#6537#0" expanded="false" />
+            <element signature="n#!!doc;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#wallTitleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDelete#0" expanded="false" />
+            <element signature="e#6870#7130#0" expanded="false" />
+            <element signature="e#6968#7121#0" expanded="false" />
+            <element signature="e#7139#7163#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetDeleteCallback#0" expanded="false" />
+            <element signature="e#7527#7640#0" expanded="false" />
+            <element signature="e#7654#8512#0" expanded="false" />
+            <element signature="e#7676#8394#0" expanded="false" />
+            <element signature="e#7790#8353#0" expanded="false" />
+            <element signature="e#8423#8506#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="n#!!block;n#displayCodisciplesDelete#0" expanded="false" />
+            <element signature="e#8863#9144#0" expanded="false" />
+            <element signature="e#8971#9135#0" expanded="false" />
+            <element signature="e#9153#9177#0" expanded="false" />
+            <element signature="n#!!doc;n#displayCodisciplesDeleteCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodisciple#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodisciple#0" expanded="false" />
+            <element signature="e#10462#10599#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
+            <element signature="e#10916#11558#0" expanded="false" />
+            <element signature="e#11567#11591#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweet#0" expanded="false" />
+            <element signature="e#11864#12038#0" expanded="false" />
+            <element signature="n#!!doc;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#writeTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweet#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweet#0" expanded="false" />
+            <element signature="e#12664#12792#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
+            <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
+            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
+            <element signature="e#14234#14393#0" expanded="false" />
+            <element signature="n#!!doc;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="n#!!block;n#fetchRequestedCodisciplesCallback#0" expanded="false" />
+            <element signature="e#14712#15458#0" expanded="false" />
+            <element signature="e#14981#15452#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitation#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitation#0" expanded="false" />
+            <element signature="e#15749#15889#0" expanded="false" />
+            <element signature="n#!!doc;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="n#!!block;n#sendInvitationCallback#0" expanded="false" />
+            <element signature="e#16077#16123#0" expanded="false" />
+            <element signature="e#16132#16177#0" expanded="false" />
+            <element signature="n#!!doc;n#pubs#0" expanded="false" />
+            <element signature="n#!!block;n#pubs#0" expanded="false" />
+            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
+            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="n#!!doc;n#overElement#0" expanded="false" />
+            <element signature="n#!!block;n#overElement#0" expanded="false" />
+            <element signature="n#!!doc;n#outElement#0" expanded="false" />
+            <element signature="n#!!block;n#outElement#0" expanded="false" />
+            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>

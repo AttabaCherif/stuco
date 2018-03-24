@@ -513,7 +513,8 @@ function displayAddCodisciple()
 }
 
 /**
- * Prépare une requete ajax permettant de récupérer une liste d'utilisateur à partir d'un nom entré par l'user courant
+ * Prépare une requete ajax permettant de récupérer une liste d'utilisateur sans lien d'approbation
+ * à partir d'un nom entré par l'user courant
  */
 function fetchRequestedCodisciples()
 {
@@ -546,7 +547,7 @@ function fetchRequestedCodisciplesCallback(codisciples)
             var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
                 "'"+" >";
             ligne+= username+"</button>";
-            ligne+="<span id='dl"+id+"' onclick='AddCodisciple((this.id.substring(2))' class='input-group-addon btn btn-primary boutons-perso'>Ajouter</span>";
+            ligne+="<span id='dl"+id+"' onclick='sendInvitation((this.id.substring(2)))' class='input-group-addon btn btn-primary boutons-perso'>Ajouter</span>";
             affiche += ligne;
         }
     }catch (err){window.console.log("fetchRequestedCodisciplesCallback -err = "+err);}
@@ -557,11 +558,76 @@ function fetchRequestedCodisciplesCallback(codisciples)
 
 /**
  * Prépare la requete ajax pour ajouter une invitation de la  part du user courant pour guest_id
- * @param $guest_id : id du user invité
  */
-function AddCodisciple(guest_id)
+function sendInvitation(guest_id)
 {
+    $.ajax({
+        type: 'GET',
+        url: 'bl/sendInvitation.php',
+        data:'guest_id='+guest_id,
+        success:sendInvitationCallback
+    });
+}
 
+/**
+ * Envoie un message alert pour confirmer ou infirmer l'invitation
+ * @param ret int : nombre de ligne modifiée en DB
+ */
+function sendInvitationCallback(ret)
+{
+    if (ret)
+    {
+        alert("Invitation envoyée !");
+    }else
+    {
+        alert("Invitation échouée!");
+    }
+}
+
+/**
+ * prepare une requete ajax pour aller chercher la liste des approbations du
+ * user courant
+ */
+function displayApprobation()
+{
+    $.ajax({
+        type : 'GET',
+        url : 'bl/fetchApprobations.php',
+        success: displayApprobationCallback
+    });
+}
+
+function displayApprobationCallback(approvals)
+{
+    window.console.log("displayApprobationCallback() -start");
+    if(g_isConnected)
+    {
+        try{
+
+            var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Approbations </button>";
+            var jarray = $.parseJSON(approvals);
+            var user_id = jarray[jarray.length - 1];
+
+            for (var i = 0 ; i <jarray.length-1 ; i++)
+            {
+                // var row= jarray[i];
+                // var id = row['id'];
+                // var username = row['username'];
+                // var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
+                //     "'"+" >";
+                // ligne+= username+"</button>";
+                // ligne+="<span id='dl"+id+"' onclick='deleteCodisciple(this.id.substring(2))' class='input-group-addon btn btn-primary boutons-perso'>Supprimer</span>";
+                // affiche += ligne;
+            }
+        }catch (err){window.console.log("displayApprobationCallback -err = "+err);}
+        affiche+="</div>";
+
+        $('#page').html(affiche);
+
+    }else
+    {
+        return ;
+    }
 }
 
 

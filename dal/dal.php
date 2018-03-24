@@ -54,6 +54,7 @@ function dbFetchUsername($id)
         return NULL;
     }
 }
+
 /**
  * @return null en cas d'exception | L'ensemble des coDisciple stockés en DB
  * @param int $id : id du user dont on demande la liste des coDisciples
@@ -122,7 +123,11 @@ function dbDeleteTweet($tweet_id)
     }catch (PDOException $erreur){return NULL;}
 }
 
-
+/**
+ * @param $user_id : id de l'user désirant supprimer un coDisciple
+ * @param $coDisciple_id : l'id du coDisciple a supprimer
+ * @return (int) nombre de ligne modifiée en DB
+ */
 function dbDeleteCodisciple($user_id, $coDisciple_id)
 {
     $sql="DELETE FROM approval WHERE (owner_id = '$user_id' AND guest_id='$coDisciple_id') OR (owner_id ='$coDisciple_id' AND guest_id= '$user_id') AND current_status = 1";
@@ -155,4 +160,35 @@ function dbfetchRequestedCodisciples($name,$user_id)
         return $rows;
     }catch (PDOException $erreur){return NULL;}
 
+}
+
+/**
+ * Ajoute en DB une approbation
+ * @param $owner_id : lanceur d'invitation
+ * @param $guest_id :  receveur d'invitation
+ * @return int : nombre d'enregistrements moodifiés en DB
+ */
+function dbSendInvitation($owner_id,$guest_id)
+{
+    $zero = 0;
+    $sql="INSERT INTO approval (owner_id, guest_id, current_status) VALUES ('$owner_id','$guest_id','$zero')";
+    try
+    {
+        $pdo = getPDO();
+        $rows = $pdo->exec($sql);
+        $pdo=null;
+
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+}
+
+function dbFetchApprobations($id)
+{
+    $sql="SELECT approval.id, approval.owner_id, approval.guest_id, approval.current_status FROM approval WHERE approval.guest_id = '$id' OR approval.owner_id='$id'";
+    try{
+        $pdo = getPDO();
+        $rows = $pdo->query($sql)->fetchAll();
+        $pdo=null;
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
 }
