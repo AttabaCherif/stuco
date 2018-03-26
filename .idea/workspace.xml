@@ -20,8 +20,8 @@
       <file leaf-file-name="stuco.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/stuco.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="611" column="13" lean-forward="true" selection-start-line="611" selection-start-column="13" selection-end-line="611" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="634" column="47" lean-forward="true" selection-start-line="634" selection-start-column="47" selection-end-line="634" selection-end-column="47" />
               <folding>
                 <element signature="e#0#21#0" expanded="false" />
                 <element signature="n#!!doc;n#initApp#0" expanded="false" />
@@ -94,8 +94,6 @@
                 <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
                 <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
                 <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
-                <element signature="e#10916#11558#0" expanded="false" />
-                <element signature="e#11567#11591#0" expanded="false" />
                 <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
                 <element signature="n#!!block;n#writeTweet#0" expanded="false" />
                 <element signature="e#11864#12038#0" expanded="false" />
@@ -107,7 +105,6 @@
                 <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
                 <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
                 <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
-                <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
                 <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
                 <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
                 <element signature="e#14234#14393#0" expanded="false" />
@@ -124,15 +121,15 @@
                 <element signature="e#16132#16177#0" expanded="false" />
                 <element signature="n#!!doc;n#pubs#0" expanded="false" />
                 <element signature="n#!!block;n#pubs#0" expanded="false" />
-                <element signature="e#17836#17928#0" expanded="false" />
+                <element signature="e#19498#19590#0" expanded="false" />
                 <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
                 <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
-                <element signature="e#18284#18372#0" expanded="false" />
+                <element signature="e#19946#20034#0" expanded="false" />
                 <element signature="n#!!doc;n#overElement#0" expanded="false" />
                 <element signature="n#!!block;n#overElement#0" expanded="false" />
                 <element signature="n#!!doc;n#outElement#0" expanded="false" />
                 <element signature="n#!!block;n#outElement#0" expanded="false" />
-                <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
+                <marker date="1522085077011" expanded="true" signature="11297:11308" ph="..." />
               </folding>
             </state>
           </provider>
@@ -142,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/bl/fetchApprobations.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -161,8 +158,8 @@
       <file leaf-file-name="dal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dal/dal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="192" column="47" lean-forward="true" selection-start-line="192" selection-start-column="47" selection-end-line="192" selection-end-column="47" />
+            <state relative-caret-position="491">
+              <caret line="186" column="118" lean-forward="true" selection-start-line="186" selection-start-column="118" selection-end-line="186" selection-end-column="118" />
               <folding>
                 <element signature="e#35#185#0#PHP" expanded="false" />
                 <element signature="n#dbReadLogin#0;n#!!top" expanded="false" />
@@ -190,10 +187,7 @@
                 <element signature="e#4723#4908#0#PHP" expanded="false" />
                 <element signature="n#dbSendInvitation#0;n#!!top" expanded="false" />
                 <element signature="e#5088#5246#0#PHP" expanded="false" />
-                <marker date="1521897239671" expanded="true" signature="5296:5398" ph="SELECT appro... " />
-                <marker date="1521897239671" expanded="true" signature="5296:5417" ph="SELECT appro... approval" />
-                <marker date="1521897239671" expanded="true" signature="5296:5423" ph="SELECT appro... approval" />
-                <marker date="1521897239671" expanded="true" signature="5296:5450" ph="SELECT appro... approval" />
+                <marker date="1522083260057" expanded="true" signature="5296:5555" ph="SELECT appro... approval" />
               </folding>
             </state>
           </provider>
@@ -202,8 +196,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="61" column="94" lean-forward="false" selection-start-line="61" selection-start-column="76" selection-end-line="61" selection-end-column="94" />
+            <state relative-caret-position="236">
+              <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -213,7 +207,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Mur</find>
       <find>username</find>
       <find>respon</find>
       <find>fe</find>
@@ -243,6 +236,7 @@
       <find>display</find>
       <find>displayTwe</find>
       <find>fetchrequ</find>
+      <find>prompt</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -273,8 +267,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bl/fetchApprobation.php" />
         <option value="$PROJECT_DIR$/bl/bl.php" />
-        <option value="$PROJECT_DIR$/dal/dal.php" />
         <option value="$PROJECT_DIR$/bl/fetchApprobations.php" />
+        <option value="$PROJECT_DIR$/dal/dal.php" />
         <option value="$PROJECT_DIR$/js/stuco.js" />
       </list>
     </option>
@@ -289,7 +283,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1366" />
     <option name="height" value="856" />
   </component>
@@ -466,7 +460,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -497,8 +492,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -615,15 +609,16 @@
       <workItem from="1521129621220" duration="18804000" />
       <workItem from="1521565568120" duration="9098000" />
       <workItem from="1521740640158" duration="60000" />
-      <workItem from="1521741139018" duration="27738000" />
+      <workItem from="1521741139018" duration="28668000" />
+      <workItem from="1522074074050" duration="9150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119009000" />
+    <option name="totallyTimeSpent" value="129089000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="856" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="872" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -632,14 +627,13 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1416" height="672" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18888889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -654,6 +648,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1416" height="672" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -697,7 +692,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -778,8 +773,6 @@
             <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
             <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
-            <element signature="e#10916#11558#0" expanded="false" />
-            <element signature="e#11567#11591#0" expanded="false" />
             <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
             <element signature="n#!!block;n#writeTweet#0" expanded="false" />
             <element signature="e#11864#12038#0" expanded="false" />
@@ -791,7 +784,6 @@
             <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
-            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="e#14234#14393#0" expanded="false" />
@@ -808,15 +800,15 @@
             <element signature="e#16132#16177#0" expanded="false" />
             <element signature="n#!!doc;n#pubs#0" expanded="false" />
             <element signature="n#!!block;n#pubs#0" expanded="false" />
-            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="e#19498#19590#0" expanded="false" />
             <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
             <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
-            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="e#19946#20034#0" expanded="false" />
             <element signature="n#!!doc;n#overElement#0" expanded="false" />
             <element signature="n#!!block;n#overElement#0" expanded="false" />
             <element signature="n#!!doc;n#outElement#0" expanded="false" />
             <element signature="n#!!block;n#outElement#0" expanded="false" />
-            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
+            <marker date="1522085077011" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -940,8 +932,6 @@
             <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
             <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
-            <element signature="e#10916#11558#0" expanded="false" />
-            <element signature="e#11567#11591#0" expanded="false" />
             <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
             <element signature="n#!!block;n#writeTweet#0" expanded="false" />
             <element signature="e#11864#12038#0" expanded="false" />
@@ -953,7 +943,6 @@
             <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
-            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="e#14234#14393#0" expanded="false" />
@@ -970,15 +959,15 @@
             <element signature="e#16132#16177#0" expanded="false" />
             <element signature="n#!!doc;n#pubs#0" expanded="false" />
             <element signature="n#!!block;n#pubs#0" expanded="false" />
-            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="e#19498#19590#0" expanded="false" />
             <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
             <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
-            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="e#19946#20034#0" expanded="false" />
             <element signature="n#!!doc;n#overElement#0" expanded="false" />
             <element signature="n#!!block;n#overElement#0" expanded="false" />
             <element signature="n#!!doc;n#outElement#0" expanded="false" />
             <element signature="n#!!block;n#outElement#0" expanded="false" />
-            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
+            <marker date="1522085077011" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1116,8 +1105,6 @@
             <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
             <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
-            <element signature="e#10916#11558#0" expanded="false" />
-            <element signature="e#11567#11591#0" expanded="false" />
             <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
             <element signature="n#!!block;n#writeTweet#0" expanded="false" />
             <element signature="e#11864#12038#0" expanded="false" />
@@ -1129,7 +1116,6 @@
             <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
-            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="e#14234#14393#0" expanded="false" />
@@ -1146,15 +1132,15 @@
             <element signature="e#16132#16177#0" expanded="false" />
             <element signature="n#!!doc;n#pubs#0" expanded="false" />
             <element signature="n#!!block;n#pubs#0" expanded="false" />
-            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="e#19498#19590#0" expanded="false" />
             <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
             <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
-            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="e#19946#20034#0" expanded="false" />
             <element signature="n#!!doc;n#overElement#0" expanded="false" />
             <element signature="n#!!block;n#overElement#0" expanded="false" />
             <element signature="n#!!doc;n#outElement#0" expanded="false" />
             <element signature="n#!!block;n#outElement#0" expanded="false" />
-            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
+            <marker date="1522085077011" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1249,8 +1235,6 @@
             <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
             <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
-            <element signature="e#10916#11558#0" expanded="false" />
-            <element signature="e#11567#11591#0" expanded="false" />
             <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
             <element signature="n#!!block;n#writeTweet#0" expanded="false" />
             <element signature="e#11864#12038#0" expanded="false" />
@@ -1262,7 +1246,6 @@
             <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
-            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="e#14234#14393#0" expanded="false" />
@@ -1279,15 +1262,15 @@
             <element signature="e#16132#16177#0" expanded="false" />
             <element signature="n#!!doc;n#pubs#0" expanded="false" />
             <element signature="n#!!block;n#pubs#0" expanded="false" />
-            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="e#19498#19590#0" expanded="false" />
             <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
             <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
-            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="e#19946#20034#0" expanded="false" />
             <element signature="n#!!doc;n#overElement#0" expanded="false" />
             <element signature="n#!!block;n#overElement#0" expanded="false" />
             <element signature="n#!!doc;n#outElement#0" expanded="false" />
             <element signature="n#!!block;n#outElement#0" expanded="false" />
-            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
+            <marker date="1522085077011" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1384,7 +1367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,7 +1374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="218" column="6" lean-forward="false" selection-start-line="218" selection-start-column="6" selection-end-line="218" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,7 +1405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,7 +1413,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="119">
             <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1451,7 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1463,34 +1441,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="61" column="94" lean-forward="false" selection-start-line="61" selection-start-column="76" selection-end-line="61" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bl/fetchApprobation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchApprobation.php" />
     <entry file="file://$PROJECT_DIR$/bl/fetchCodisciples.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="10" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/fetchApprobations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bl/bl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dal/dal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="192" column="47" lean-forward="true" selection-start-line="192" selection-start-column="47" selection-end-line="192" selection-end-column="47" />
+        <state relative-caret-position="491">
+          <caret line="186" column="118" lean-forward="true" selection-start-line="186" selection-start-column="118" selection-end-line="186" selection-end-column="118" />
           <folding>
             <element signature="e#35#185#0#PHP" expanded="false" />
             <element signature="n#dbReadLogin#0;n#!!top" expanded="false" />
@@ -1518,34 +1504,15 @@
             <element signature="e#4723#4908#0#PHP" expanded="false" />
             <element signature="n#dbSendInvitation#0;n#!!top" expanded="false" />
             <element signature="e#5088#5246#0#PHP" expanded="false" />
-            <marker date="1521897239671" expanded="true" signature="5296:5398" ph="SELECT appro... " />
-            <marker date="1521897239671" expanded="true" signature="5296:5417" ph="SELECT appro... approval" />
-            <marker date="1521897239671" expanded="true" signature="5296:5423" ph="SELECT appro... approval" />
-            <marker date="1521897239671" expanded="true" signature="5296:5450" ph="SELECT appro... approval" />
+            <marker date="1522083260057" expanded="true" signature="5296:5555" ph="SELECT appro... approval" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bl/bl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bl/fetchApprobations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/stuco.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="611" column="13" lean-forward="true" selection-start-line="611" selection-start-column="13" selection-end-line="611" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="634" column="47" lean-forward="true" selection-start-line="634" selection-start-column="47" selection-end-line="634" selection-end-column="47" />
           <folding>
             <element signature="e#0#21#0" expanded="false" />
             <element signature="n#!!doc;n#initApp#0" expanded="false" />
@@ -1618,8 +1585,6 @@
             <element signature="n#!!block;n#deleteCodiscipleCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayTweetPrompt#0" expanded="false" />
             <element signature="n#!!block;n#displayTweetPrompt#0" expanded="false" />
-            <element signature="e#10916#11558#0" expanded="false" />
-            <element signature="e#11567#11591#0" expanded="false" />
             <element signature="n#!!doc;n#writeTweet#0" expanded="false" />
             <element signature="n#!!block;n#writeTweet#0" expanded="false" />
             <element signature="e#11864#12038#0" expanded="false" />
@@ -1631,7 +1596,6 @@
             <element signature="n#!!doc;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!block;n#deleteTweetCallback#0" expanded="false" />
             <element signature="n#!!doc;n#displayAddCodisciple#0" expanded="false" />
-            <element signature="n#!!block;n#displayAddCodisciple#0" expanded="false" />
             <element signature="n#!!doc;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="n#!!block;n#fetchRequestedCodisciples#0" expanded="false" />
             <element signature="e#14234#14393#0" expanded="false" />
@@ -1648,15 +1612,15 @@
             <element signature="e#16132#16177#0" expanded="false" />
             <element signature="n#!!doc;n#pubs#0" expanded="false" />
             <element signature="n#!!block;n#pubs#0" expanded="false" />
-            <element signature="e#17836#17928#0" expanded="false" />
+            <element signature="e#19498#19590#0" expanded="false" />
             <element signature="n#!!doc;n#pubsCallback#0" expanded="false" />
             <element signature="n#!!block;n#pubsCallback#0" expanded="false" />
-            <element signature="e#18284#18372#0" expanded="false" />
+            <element signature="e#19946#20034#0" expanded="false" />
             <element signature="n#!!doc;n#overElement#0" expanded="false" />
             <element signature="n#!!block;n#overElement#0" expanded="false" />
             <element signature="n#!!doc;n#outElement#0" expanded="false" />
             <element signature="n#!!block;n#outElement#0" expanded="false" />
-            <marker date="1521899144387" expanded="true" signature="11297:11308" ph="..." />
+            <marker date="1522085077011" expanded="true" signature="11297:11308" ph="..." />
           </folding>
         </state>
       </provider>

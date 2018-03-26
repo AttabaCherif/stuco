@@ -184,7 +184,7 @@ function dbSendInvitation($owner_id,$guest_id)
 
 function dbFetchApprobations($id)
 {
-    $sql="SELECT approval.id, approval.owner_id, approval.guest_id, approval.current_status FROM approval WHERE approval.guest_id = '$id' OR approval.owner_id='$id'";
+    $sql="SELECT approval.id, approval.owner_id, approval.guest_id, approval.current_status , login.username, login.id FROM  approval, login WHERE (approval.guest_id = '$id' AND login.id = approval.owner_id) OR (approval.owner_id='$id' AND login.id = approval.guest_id)";
     try{
         $pdo = getPDO();
         $rows = $pdo->query($sql)->fetchAll();

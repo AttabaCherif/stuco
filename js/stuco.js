@@ -607,18 +607,51 @@ function displayApprobationCallback(approvals)
             var affiche = "<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' >Approbations </button>";
             var jarray = $.parseJSON(approvals);
             var user_id = jarray[jarray.length - 1];
+            var len = jarray.length-1;
 
-            for (var i = 0 ; i <jarray.length-1 ; i++)
+            var invitationRecue="<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' > Invitations Recues </button>";
+            var invitationLance="<div class='list-group'><button type='button' class='custom-list-group list-group-item list-group-item-action active' > Invitations Lancées </button>";
+            for (var i = 0 ; i < len ; i++)
             {
-                // var row= jarray[i];
-                // var id = row['id'];
-                // var username = row['username'];
-                // var ligne = "<button class='list-group-item list-group-item-action' id='co"+id+
-                //     "'"+" >";
-                // ligne+= username+"</button>";
-                // ligne+="<span id='dl"+id+"' onclick='deleteCodisciple(this.id.substring(2))' class='input-group-addon btn btn-primary boutons-perso'>Supprimer</span>";
-                // affiche += ligne;
+                var row= jarray[i];
+
+                var etat;
+                var guest_id = row['guest_id'];
+
+                if(user_id == guest_id)
+                {
+                    var otherId=row['owner_id'];
+                    //Afficher inviation reçue + bt refuser et bt accepter
+                    invitationRecue+="<div class='btn-group'><button class='list-group-item list-group-item-action'>"+ row['username'] +"</button>";
+                    invitationRecue+= "<span id='ac"+otherId+"' class='btn custom-btn btn-primary boutons-perso' onclick='AccepterCodisciple(this.id.substring(2))'>Accepter</span>";
+                    invitationRecue+= "<span id='re"+otherId+"' class='btn custom-btn btn-primary boutons-perso' onclick='RefuserCodisciple(this.id.substring(2))'>Refuser</span></div>"
+
+                }else
+                {
+                    // montrer les invitations lancée et leur états
+                    var status = row['current_status']
+                    switch (status){
+                        case "0" :
+                            etat  = "En cours";
+                            break;
+                        case "1" :
+                            etat = "acceptée";
+                            break;
+                        case "2" :
+                            etat  = "Refusée";
+                            break;
+                        default:
+                            etat  = "Indéterminée"
+                    }
+                    invitationLance+="<button class='list-group-item list-group-item-action'>"+ row['username'] +" ["+etat+"]"+"</button>";
+                }
             }
+
+            invitationLance+="</div>";
+            invitationRecue+="</div>";
+            affiche+=invitationRecue;
+            affiche+=invitationLance;
+
         }catch (err){window.console.log("displayApprobationCallback -err = "+err);}
         affiche+="</div>";
 
