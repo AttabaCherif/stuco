@@ -597,6 +597,10 @@ function displayApprobation()
     });
 }
 
+/**
+ * Affiche les différentes approbations par Lancée/Reçues ; permet d'accepter ou refuser
+ * @param approvals : liste des approbations liées à l'utilisateur courant
+ */
 function displayApprobationCallback(approvals)
 {
     window.console.log("displayApprobationCallback() -start");
@@ -620,12 +624,14 @@ function displayApprobationCallback(approvals)
 
                 if(user_id == guest_id)
                 {
-                    var otherId=row['owner_id'];
-                    //Afficher inviation reçue + bt refuser et bt accepter
-                    invitationRecue+="<div class='btn-group'><button class='list-group-item list-group-item-action'>"+ row['username'] +"</button>";
-                    invitationRecue+= "<span id='ac"+otherId+"' class='btn custom-btn btn-primary boutons-perso' onclick='AccepterCodisciple(this.id.substring(2))'>Accepter</span>";
-                    invitationRecue+= "<span id='re"+otherId+"' class='btn custom-btn btn-primary boutons-perso' onclick='RefuserCodisciple(this.id.substring(2))'>Refuser</span></div>"
-
+                    if (row['current_status']==0)
+                    {
+                        var approbationId=row['id'];
+                        //Afficher inviation reçue + bt refuser et bt accepter
+                        invitationRecue+="<div class='btn-group'><button class='list-group-item list-group-item-action'>"+ row['username'] +"</button>";
+                        invitationRecue+= "<span id='ac"+approbationId+"' class='btn custom-btn btn-primary boutons-perso' onclick='accepterCodisciple(this.id.substring(2))'>Accepter</span>";
+                        invitationRecue+= "<span id='re"+approbationId+"' class='btn custom-btn btn-primary boutons-perso' onclick='refuserCodisciple(this.id.substring(2))'>Refuser</span></div>"
+                    }       
                 }else
                 {
                     // montrer les invitations lancée et leur états
@@ -663,6 +669,63 @@ function displayApprobationCallback(approvals)
     }
 }
 
+/**
+ * Accepte le coDisciple pour l'utilisateur courant
+ * @param id int : id du codisciple à accepter
+ */
+function accepterCodisciple(id)
+{
+    $.ajax({
+        type : 'GET',
+        url : 'bl/accepterCodisciple.php',
+        data : 'id='+id,
+        success :accepterCodiscipleCallback
+    });
+}
+/**
+ * Affiche la liste des coDisciples (màj) + confirmation
+ * @param ret int : nombre d'enregistrement modifié en DB
+ */
+function accepterCodiscipleCallback(ret)
+{
+        if (ret)
+        {
+            alert("Codisciple accepté !");
+            fetchCodisciples(0);
+        }
+        else
+            alert("FOIRAGE!");
+
+}
+
+/**
+ * refuse le coDisciple pour l'utilisateur courant
+ * @param id int : l'id du coDisciple a refuser
+ */
+function refuserCodisciple(id)
+{
+    $.ajax({
+        type : 'GET',
+        url : 'bl/refuserCodisciple.php',
+        data : 'id='+id,
+        success :refuserCodiscipleCallback
+    })
+}
+
+/**
+ * Affiche la liste des coDisciples (màj)
+ * @param ret int : nombre d'enregistrement modifié en DB
+ */
+function refuserCodiscipleCallback(ret)
+{
+    if (ret)
+    {
+        alert("Codisciple refusé !");
+        fetchCodisciples(0);
+    }
+    else
+        alert("FOIRAGE!");
+}
 
 /**
  * Recupère les pubs par une requête Ajax vers le server

@@ -121,11 +121,33 @@ function sendInvitation($owner_id,$guest_id)
 }
 
 /**
- * @param $id : id  du l'utilisateur courant
- * @return list des approbations de  l'utilisateur courant
+ * @param $id int : id  du l'utilisateur courant
+ * @return array des approbations de  l'utilisateur courant
  */
 function fetchApprobations($id)
 {
     $ret= dbFetchApprobations($id);
+    return $ret;
+}
+
+/**
+ * met à jour l'approbation
+ * @param $approbation_id int :  id de l'approbation à modifier
+ * @return int : nombre d'enregistrements moodifiés en DB
+ */
+function accepterCodisciple($approbation_id)
+{
+    $ret = dbAccepterCodisciple($approbation_id);
+    return $ret;
+}
+
+/**
+ * met à jour l'approbation
+ * @param $approbation_id int :  id de l'approbation à modifier
+ * @return int : nombre d'enregistrements moodifiés en DB
+ */
+function refuserCodisciple($approbation_id)
+{
+    $ret = dbRefuserCodisciple($approbation_id);
     return $ret;
 }

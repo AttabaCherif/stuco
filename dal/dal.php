@@ -182,12 +182,49 @@ function dbSendInvitation($owner_id,$guest_id)
     }catch (PDOException $erreur){return NULL;}
 }
 
+/**
+ * @param $id int : id de l'utilisateur
+ * @return liste des approbations lié à l'id en parametre
+ */
 function dbFetchApprobations($id)
 {
-    $sql="SELECT approval.id, approval.owner_id, approval.guest_id, approval.current_status , login.username, login.id FROM  approval, login WHERE (approval.guest_id = '$id' AND login.id = approval.owner_id) OR (approval.owner_id='$id' AND login.id = approval.guest_id)";
+    $sql="SELECT approval.id, approval.owner_id, approval.guest_id, approval.current_status , login.username FROM  approval, login WHERE (approval.guest_id = '$id' AND login.id = approval.owner_id) OR (approval.owner_id='$id' AND login.id = approval.guest_id)";
     try{
         $pdo = getPDO();
         $rows = $pdo->query($sql)->fetchAll();
+        $pdo=null;
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+}
+
+/**
+ * modifie le current_status (=1) de l'approbation lié à l'id en parametre
+ * @param $approbation_id : id de l'approbation à modifier
+ * @return le nombre d'enregistrement modifié en DB
+ */
+function dbAccepterCodisciple($approbation_id)
+{
+    $sql="UPDATE approval SET approval.current_status = 1 WHERE approval.id = '$approbation_id' ";
+    try{
+        $pdo = getPDO();
+        $rows = $pdo->exec($sql);
+        $pdo=null;
+        return $rows;
+    }catch (PDOException $erreur){return NULL;}
+}
+
+
+/**
+ * modifie le current_status (=2) de l'approbation lié à l'id en parametre
+ * @param $approbation_id : id de l'approbation à modifier
+ * @return le nombre d'enregistrement modifié en DB
+ */
+function dbRefuserCodisciple($approbation_id)
+{
+    $sql="UPDATE approval SET approval.current_status = 2 WHERE approval.id = '$approbation_id' ";
+    try{
+        $pdo = getPDO();
+        $rows = $pdo->exec($sql);
         $pdo=null;
         return $rows;
     }catch (PDOException $erreur){return NULL;}
