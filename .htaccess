@@ -1,1 +1,3 @@
 RewriteRule ^login/([0-9a-z]+)/([0-9a-z]+)/$ bl/RestController.php?method=authenticate&username=$1&password=$2 [nc,qsa]
+
+RewriteRule ^fetchCodisciples/([0-9]+)/$ bl/RestController.php?method=fetchCoDisciples&id=$1 [nc,qsa]

@@ -20,7 +20,12 @@ switch($method){
         $password = $_GET["password"];
         $stucoRestHandler->restAuthenticate($username , $password);
         break;
-    case "" :
+    case "fetchCoDisciples" :
+// to handle REST Url fetchCodisciple/<id_login>/
+        $stucoRestHandler = new StucoRestHandler();
+        $id = $_GET['id'];
+        $stucoRestHandler->restFetchCodisciples($id);
+        break;
 //404 - not found;
         break;
 }
